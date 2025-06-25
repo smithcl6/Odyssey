@@ -1,9 +1,12 @@
+import Navbar from "./Navbar"
+import { ThemeProvider } from "./ThemeProvider"
+
 function App() {
 
   return (
-    <h1 className="text-3x1 font-bold underline">
-        Tailwind Working!
-    </h1>
+    <ThemeProvider>
+        <Navbar></Navbar>
+    </ThemeProvider>
   )
 }
 

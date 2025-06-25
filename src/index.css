@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@custom-variant zelda (&:where(.zelda, .zelda *));
+@custom-variant mario (&:where(.mario, .mario *));
+
+@layer base {
+    button, select {
+        @apply cursor-pointer;
+    }
+
+    html {
+        @apply bg-gray-800;
+    }
+    
+    html.zelda {
+        @apply bg-amber-500;
+    }
+    
+    html.mario {
+        @apply bg-red-500;
+    }
+}
