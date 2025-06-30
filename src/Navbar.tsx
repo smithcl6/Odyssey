@@ -7,18 +7,17 @@ function Navbar() {
 
     const themes = ['dark', 'zelda', 'mario'];
     const options = themes.map(
-        theme => <option value={theme} className={theme}>{theme}</option>
+        theme => <option value={theme} className="bg-emerald-500">{theme}</option>
     );
 
     return (
-        <header className="flex justify-between p-4 bg-emerald-900">
-            <h1>Theme Test</h1>
+        <header className="flex justify-between p-4">
+            <h1>Current theme: { themeContext.theme }</h1>
             <label htmlFor="themes"></label>
             <select id="themes" onChange={(value) => themeContext.setTheme(value.target.value)}>
                 {options}
             </select>
             <Audio></Audio>
-            <h3>Current theme: { themeContext.theme }</h3>
         </header>
     )
 }

@@ -26,7 +26,7 @@ function Audio() {
     const audioSource: string = musicList.find(item => item.theme === themeContext.theme)?.filePath ?? musicList[0].theme;
 
     return (
-        <audio controls src={audioSource}></audio>
+        <audio controls loop src={audioSource}></audio>
     );
 }
 
