@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
+import Audio from "./Audio";
 
 function Navbar() {
     const themeContext = useContext(ThemeContext);
@@ -10,12 +11,13 @@ function Navbar() {
     );
 
     return (
-        <header className="flex justify-between m-4">
-            <h1 className="bg-blue-500 zelda:bg-amber-500 mario:bg-red-500">Theme Test</h1>
+        <header className="flex justify-between p-4 bg-emerald-900">
+            <h1>Theme Test</h1>
             <label htmlFor="themes"></label>
             <select id="themes" onChange={(value) => themeContext.setTheme(value.target.value)}>
                 {options}
             </select>
+            <Audio></Audio>
             <h3>Current theme: { themeContext.theme }</h3>
         </header>
     )

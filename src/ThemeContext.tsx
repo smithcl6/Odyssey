@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-interface Theme {
+export interface Theme {
     theme: string;
     setTheme: (newTheme: string) => void;
 }
