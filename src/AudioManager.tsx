@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext, type Theme } from "./ThemeContext";
 
 interface Music {
@@ -8,6 +8,7 @@ interface Music {
 
 function AudioManager() {
     const themeContext: Theme = useContext(ThemeContext);
+    const [autoPlay, setAutoPlay] = useState(false);
     const musicList: Music[] = [
         {
             theme: 'dark',
@@ -26,7 +27,7 @@ function AudioManager() {
     const audioSource: string = musicList.find(item => item.theme === themeContext.theme)?.filePath ?? musicList[0].theme;
 
     return (
-        <audio controls loop src={audioSource}></audio>
+        <audio autoPlay={autoPlay} controls loop src={audioSource} onPlay={() => setAutoPlay(true)} onPause={() => setAutoPlay(false)}></audio>
     );
 }
 
