@@ -6,7 +6,7 @@ interface Music {
     filePath: string;
 }
 
-function Audio() {
+function AudioManager() {
     const themeContext: Theme = useContext(ThemeContext);
     const musicList: Music[] = [
         {
@@ -30,4 +30,4 @@ function Audio() {
     );
 }
 
-export default Audio;
+export default AudioManager;

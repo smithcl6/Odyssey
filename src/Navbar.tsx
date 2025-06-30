@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
-import Audio from "./Audio";
+import AudioManager from "./AudioManager";
 
 function Navbar() {
     const themeContext = useContext(ThemeContext);
@@ -17,7 +17,7 @@ function Navbar() {
             <select id="themes" onChange={(value) => themeContext.setTheme(value.target.value)}>
                 {options}
             </select>
-            <Audio></Audio>
+            <AudioManager></AudioManager>
         </header>
     )
 }
