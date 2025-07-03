@@ -7,7 +7,7 @@ function Navbar() {
 
     const themes = ['dark', 'zelda', 'mario'];
     const options = themes.map(
-        theme => <option value={theme} className="bg-emerald-500">{theme}</option>
+        theme => <option key={theme} value={theme} className="bg-emerald-500">{theme}</option>
     );
 
     return (
