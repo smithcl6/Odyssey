@@ -11,7 +11,7 @@ function Navbar() {
     );
 
     return (
-        <header className="flex justify-between p-4">
+        <header className="flex justify-between p-4 fixed w-screen">
             <h1>Current theme: { themeContext.theme }</h1>
             <label htmlFor="themes"></label>
             <select id="themes" onChange={(value) => themeContext.setTheme(value.target.value)}>

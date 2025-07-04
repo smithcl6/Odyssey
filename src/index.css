@@ -13,10 +13,23 @@
     }
     
     html.zelda {
-        @apply bg-amber-500;
+        @apply bg-stone-500;
     }
     
     html.mario {
         @apply bg-red-500;
     }
+}
+
+@layer components {
+    .hero {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("src/assets/profile.jpg");
+        @variant zelda {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("src/assets/oot.png");
+        }
+        @variant mario {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("src/assets/mario-odyssey.jpg");
+        }
+    }
+
 }
