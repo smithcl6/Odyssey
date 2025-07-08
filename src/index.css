@@ -13,7 +13,7 @@
     }
 
     html {
-        @apply bg-gray-800 text-white;
+        @apply bg-black text-white;
     }
     
     html.zelda {
