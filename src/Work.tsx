@@ -7,6 +7,12 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import Accordion from '@mui/material/Accordion';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { AccordionDetails, AccordionSummary } from '@mui/material';
+import type { JSX } from 'react';
+import { IconContext } from 'react-icons';
+import { SiAngular } from 'react-icons/si';
+import { VscAzure, VscVscode } from 'react-icons/vsc';
+import { FaGitAlt, FaNpm } from 'react-icons/fa';
+import { AiOutlineDotNet } from 'react-icons/ai';
 
 interface JobInfo {
     title: string,
@@ -15,7 +21,7 @@ interface JobInfo {
     website: string,
     timeframe: string,
     details: string[],
-    tech: string[]
+    tech: JSX.Element[]
 }
 
 function Job({ jobInfo }: { jobInfo: JobInfo }) {
@@ -39,7 +45,11 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
                     {jobInfo.details.map((detail, index) => <li className='p-1' key={index}>{detail}</li>)}
                 </ul>
                 <h6 className='text-lg font-bold'>Tech Used</h6>
-                {jobInfo.tech.map((tech, index) => <h1 key={index}>Placeholder image of {tech}</h1>)}
+                <span className='flex flex-wrap justify-evenly'>
+                    <IconContext value={{ className: 'text-9xl p-2' }}>
+                        {jobInfo.tech?.map((tech) => <div className='flex flex-col items-center' key={tech.key}>{tech}<h6>{tech.key}</h6></div>)}
+                    </IconContext>
+                </span>
             </AccordionDetails>
         </Accordion>
     );
@@ -59,10 +69,12 @@ function Work() {
                 'Package Updates'
             ],
             tech: [
-                'Angular',
-                'Node.js',
-                'Azure',
-                '.NET'
+                <SiAngular key='Angular' title='Angular' />,
+                <VscAzure key='Azure' title='Azure' />,
+                <FaGitAlt key='Git' title='Git' />,
+                <FaNpm key='Node Package Manager' title='Node Package Manager' />,
+                <VscVscode key='VS Code' title='VS Code' />,
+                <AiOutlineDotNet key='.NET' title='.NET' />,
             ]
         },
         {
@@ -76,10 +88,12 @@ function Work() {
                 'Agile'
             ],
             tech: [
-                'Angular',
-                'Node.js',
-                'Azure',
-                '.NET'
+                <SiAngular key='Angular' title='Angular' />,
+                <VscAzure key='Azure' title='Azure' />,
+                <FaGitAlt key='Git' title='Git' />,
+                <FaNpm key='Node Package Manager' title='Node Package Manager' />,
+                <VscVscode key='Visual Studio Code' title='VS Code' />,
+                <AiOutlineDotNet key='.NET' title='.NET' />,
             ]
         },
     ]
