@@ -4,9 +4,6 @@
 @custom-variant mario (&:where(.mario, .mario *));
 
 @layer base {
-    * {
-        @apply duration-500 ease-in-out;
-    }
 
     button, select {
         @apply cursor-pointer;
