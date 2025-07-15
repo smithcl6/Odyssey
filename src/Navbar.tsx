@@ -11,7 +11,7 @@ function Navbar() {
     );
 
     return (
-        <header className="flex justify-between p-4 sticky top-0 w-screen z-10 bg-gray-900">
+        <header className="flex justify-between p-4 sticky top-0 z-10 bg-gray-900">
             <h1>Current theme: { themeContext.theme }</h1>
             <label htmlFor="themes"></label>
             <select id="themes" onChange={(value) => themeContext.setTheme(value.target.value)}>
