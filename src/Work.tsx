@@ -64,9 +64,15 @@ function Work() {
             website: 'https://www.amctechnology.com/',
             timeframe: 'January 2024 — July 2024',
             details: [
-                'Agile',
-                'Testing and Deploying Code Changes',
-                'Package Updates'
+                `Resolved technical debt and fixed minor bugs for different web apps.`,
+                `Created test-case templates for various apps. These were designed to provide further comprehensive
+                documentation when regression testing.`,
+                `Pushed code to production. These were completed late at night to minimize any potential interference
+                with our clients. The aforementioned test-case documents helped streamline this process.`,
+                `Agile work environment. Compared to my time as an intern, agile work practices were greatly increased.
+                This included involvement in story pointing meetings, sprint retrospectives, one-on-ones,
+                both company and development standups, greater responsibility with user stories and deliverables, etc.`,
+                `Earned my "Microsoft Azure Fundamentals" (AZ 900) certificate as a part of onboarding.`,
             ],
             tech: [
                 <SiAngular key='Angular' title='Angular' />,
@@ -84,15 +90,31 @@ function Work() {
             website: 'https://www.amctechnology.com/',
             timeframe: 'June 2021 — December 2023',
             details: [
-                'Different Projects',
-                'Agile'
+                `Full-time work during the summer, and part-time work during fall and spring semesters.
+                Each summer consisted of different web development projects that involved direct collaboration with another intern.
+                Further details of each summer project are mentioned below.
+                Because of school, work items were usually lower in priority during the fall and spring, 
+                such as updating the Angular or .NET version of different projects.`,
+                `Agile work environment. Alongside daily standups, we had to present our progress to the company every other sprint.`,
+                `Summer 2023: Prototyped transcription functionality and sentiment analysis in an existing telephony application.
+                The project utilized Azure Cognitive Services (renamed to Azure AI Services)
+                which provided a cloud-based speech-to-text AI model. As a prototype, our final demo of the project
+                involved passing transcriptions to a GPT model that was meant to serve as a call center agent "co-pilot"
+                by giving recommendations to the human agent. Further utilization of Azure AI Services was included
+                in other telephony apps after the summer internship; the project was a massive success as a prototype.`,
+                `Summer 2022: Developed an application that allowed clients to subscribe to AMC's services through the
+                Azure marketplace. Although the project was based on a pre-existing .NET application, I modified it to 
+                suit the needs of AMC.`,
+                `Summer 2021: Developed an ROI Calculator in the AMC Technology website.
+                Clients that were interested were also able to directly contact AMC through the app.
+                The project was made using HTML, CSS, JavaScript, and Microsoft Power Automate.`
             ],
             tech: [
                 <SiAngular key='Angular' title='Angular' />,
                 <VscAzure key='Azure' title='Azure' />,
                 <FaGitAlt key='Git' title='Git' />,
                 <FaNpm key='Node Package Manager' title='Node Package Manager' />,
-                <VscVscode key='Visual Studio Code' title='VS Code' />,
+                <VscVscode key='VSCode' title='VS Code' />,
                 <AiOutlineDotNet key='.NET' title='.NET' />,
             ]
         },
