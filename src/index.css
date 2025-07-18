@@ -32,5 +32,14 @@
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("src/assets/mario-odyssey.jpg");
         }
     }
+}
 
+@layer utilities {
+    .MuiPaper-root {
+        @apply bg-gray-700 rounded-2xl;
+    }
+
+    .MuiSelect-icon {
+        @apply text-white;
+    }
 }
