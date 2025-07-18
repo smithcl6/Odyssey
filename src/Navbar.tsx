@@ -35,8 +35,9 @@ function Navbar() {
     return (
         <header className="flex justify-between p-4 sticky top-0 z-10 bg-gray-900">
             <h1>Current theme: { themeContext.theme }</h1>
+            <span className="flex">
             <Select
-                className="text-white bg-gray-800 text-4xl rounded-2xl"
+                    className="text-white bg-gray-800 hover:bg-gray-700 text-4xl rounded-l-2xl"
                 name="Theme"
                 value={themeContext.theme}
                 onChange={(value) => themeContext.setTheme(value.target.value)}
@@ -44,7 +45,8 @@ function Navbar() {
             >
                 {options}
             </Select>
-            <AudioManager></AudioManager>
+                <AudioManager />
+            </span>
         </header>
     )
 }

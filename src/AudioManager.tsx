@@ -1,5 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { ThemeContext, type Theme } from "./ThemeContext";
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import MusicOffIcon from '@mui/icons-material/MusicOff';
 
 interface Music {
     theme: string;
@@ -9,6 +11,7 @@ interface Music {
 function AudioManager() {
     const themeContext: Theme = useContext(ThemeContext);
     const [autoPlay, setAutoPlay] = useState(false);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
     const musicList: Music[] = [
         {
             theme: 'dark',
@@ -26,8 +29,29 @@ function AudioManager() {
 
     const audioSource: string = musicList.find(item => item.theme === themeContext.theme)?.filePath ?? musicList[0].theme;
 
+    function MusicIcon() {
+        if (audioRef.current?.paused === false) {
+            return <MusicNoteIcon className="text-4xl" />;
+        } else {
+            return <MusicOffIcon className="text-4xl" />;
+        }
+    }
+
+    function handleMusicState() {
+        if (audioRef.current?.paused) {
+            audioRef.current.play();
+        } else {
+            audioRef.current?.pause();
+        }
+    }
+
     return (
-        <audio autoPlay={autoPlay} controls loop src={audioSource} onPlay={() => setAutoPlay(true)} onPause={() => setAutoPlay(false)}></audio>
+        <>
+            <button className="bg-gray-800 hover:bg-gray-700 rounded-r-2xl" onClick={handleMusicState}>
+                <MusicIcon />
+            </button>
+            <audio ref={audioRef} autoPlay={autoPlay} src={audioSource} loop onPlay={() => setAutoPlay(true)} onPause={() => setAutoPlay(false)}></audio>
+        </>
     );
 }
 
