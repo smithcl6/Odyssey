@@ -35,8 +35,12 @@
 }
 
 @layer utilities {
-    .MuiPaper-root {
+    .MuiMenu-paper {
         @apply bg-gray-700 rounded-2xl;
+    }
+
+    .MuiMenu-list {
+        @apply pb-0 pt-0;
     }
 
     .MuiSelect-icon {
