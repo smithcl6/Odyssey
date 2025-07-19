@@ -33,8 +33,7 @@ function Navbar() {
     );
 
     return (
-        <header className="flex justify-between p-4 sticky top-0 z-10 bg-gray-900">
-            <h1>Current theme: { themeContext.theme }</h1>
+        <header className="flex justify-end p-2 sm:p-8 fixed w-screen bg-transparent">
             <span className="flex">
             <Select
                     className="text-white bg-gray-800 hover:bg-gray-700 text-4xl rounded-l-2xl"
