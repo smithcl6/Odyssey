@@ -2,20 +2,28 @@ import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import { CardContent, CardMedia } from "@mui/material";
 import Card from "@mui/material/Card";
-import { useState, type JSX } from "react";
+import { useRef, useState, type JSX } from "react";
 import { FaGithub } from "react-icons/fa";
 import { type ProjectInfo, projects } from './constants'
 
 
 function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
     const [expanded, setExpanded] = useState(false);
+    const expandedCardRef = useRef<HTMLDivElement | null>(null);
+
+    function handleCardExpansion() {
+        expandedCardRef?.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 
     const github: JSX.Element = 
         projectInfo.repo ? <a className='text-4xl' href={projectInfo.repo} title="GitHub" target='_blank' rel='noopener noreferrer'><FaGithub /></a> : <span></span>;
 
     const condensedCard: JSX.Element =
         <div className='p-4 md:w-1/2 xl:w-1/3'>
-            <Card className='bg-gray-900 text-white flex flex-col h-full justify-between'>
+            <Card className='bg-gray-900 text-white flex flex-col h-full justify-between rounded-2xl'>
                 <h5 className='text-lg md:text-2xl lg:text-xl p-2 text-center font-bold'>{projectInfo.title}</h5>
                 <CardMedia className='object-cover rounded-4xl w-full p-4' component='img' image={projectInfo.images[0]} />
                 <h6 className='text-lg p-4'>{projectInfo.summary}</h6>
@@ -31,8 +39,8 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
         <div key={index} className='snap-center inline-block p-2 sm:pl-4 sm:pr-4 h-[25vh]'><img className='w-full h-full object-cover rounded-2xl' src={image} /></div>);
 
     const expandedCard: JSX.Element = 
-        <div className='p-4 w-full'>
-            <Card className='bg-gray-900 text-white'>
+        <div className='p-4 w-full scroll-mt-28' ref={expandedCardRef} onLoad={handleCardExpansion}>
+            <Card className='bg-gray-900 text-white rounded-2xl'>
                 <CardContent className='flex flex-col'>
                     <h5 className='text-lg lg:text-2xl 2xl:text-3xl p-2 text-center font-bold'>{projectInfo.title}</h5>
                     <div className='flex justify-center'><span className='snap-x overflow-x-auto whitespace-nowrap'>{expandedImages}</span></div>
