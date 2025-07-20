@@ -8,6 +8,10 @@ interface Music {
     filePath: string;
 }
 
+/**
+ * Responsible for playing music depending on the user's chosen theme.
+ * @returns play/pause button of theme music.
+ */
 function AudioManager() {
     const themeContext: Theme = useContext(ThemeContext);
     const [autoPlay, setAutoPlay] = useState(false);
@@ -29,6 +33,9 @@ function AudioManager() {
 
     const audioSource: string = musicList.find(item => item.theme === themeContext.theme)?.filePath ?? musicList[0].theme;
 
+    /**
+     * @returns Appropriate icon depending on if music is playing or not.
+     */
     function MusicIcon() {
         if (audioRef.current?.paused === false) {
             return <MusicNoteIcon className="text-4xl" />;
@@ -37,6 +44,9 @@ function AudioManager() {
         }
     }
 
+    /**
+     * Using the audio reference, toggles play and pause state of music player.
+     */
     function handleMusicState() {
         if (audioRef.current?.paused) {
             audioRef.current.play();

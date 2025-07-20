@@ -6,7 +6,13 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
 
+/* 
+This file's purpose is to hold information that is designed to
+grow in quantity over time. It helps keep the structure of
+the component separate from its content, which improves scalability.
+*/
 
+// Information that should be included for each job experience.
 export interface JobInfo {
     title: string,
     icon: string,
@@ -17,6 +23,7 @@ export interface JobInfo {
     tech: JSX.Element[]
 };
 
+// List of JobInfo objects. They are used to dynamically populate the Work Component.
 export const jobs: JobInfo[] = [
     {
         title: 'Software Engineer',
@@ -81,7 +88,7 @@ export const jobs: JobInfo[] = [
     },
 ];
 
-
+// Information that should be included in personal projects.
 export interface ProjectInfo {
     title: string,
     images: string[],
@@ -91,6 +98,7 @@ export interface ProjectInfo {
     repo?: string
 }
 
+// List of ProjectInfo objects. They are used to dynamically populate the Projects Component.
 export const projects: ProjectInfo[] = [
     {
         title: 'Maxx Energy Employee Portal',

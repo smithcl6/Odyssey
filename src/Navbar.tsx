@@ -10,6 +10,11 @@ interface ThemeIcon {
     icon: JSX.Element
 }
 
+/**
+ * This component will house navigation at a later time. Not enough content to need that feature as of now.
+ * Navbar includes UI for changing the theme as well as the AudioManager.
+ * @returns the page's navigation menu.
+ */
 function Navbar() {
     const themeContext = useContext(ThemeContext);
 

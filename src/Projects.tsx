@@ -6,11 +6,18 @@ import { useRef, useState, type JSX } from "react";
 import { FaGithub } from "react-icons/fa";
 import { type ProjectInfo, projects } from './constants'
 
-
+/**
+ * Takes information of each project and displays them in an expanded or collapsed card view.
+ * @param projectInfo houses information of each project. Allows for scalable Projects section.
+ * @returns Expanded or compressed card of a non-work-related project.
+ */
 function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
     const [expanded, setExpanded] = useState(false);
     const expandedCardRef = useRef<HTMLDivElement | null>(null);
 
+    /**
+     * Scrolls to the top of the project card that was clicked to be expanded.
+     */
     function handleCardExpansion() {
         expandedCardRef?.current?.scrollIntoView({
             behavior: 'smooth',
@@ -18,9 +25,11 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
         });
     }
 
+    // GitHub Icon and link if it exists for any given project.
     const github: JSX.Element = 
         projectInfo.repo ? <a className='text-4xl' href={projectInfo.repo} title="GitHub" target='_blank' rel='noopener noreferrer'><FaGithub /></a> : <span></span>;
 
+    // Houses JSX of a project in its condensed view.
     const condensedCard: JSX.Element =
         <div className='p-4 md:w-1/2 xl:w-1/3'>
             <Card className='bg-gray-900 text-white flex flex-col h-full justify-between rounded-2xl'>
@@ -34,10 +43,12 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
             </Card>
         </div>
 
+    // Houses images for each project. Only viewable in expanded card view.
     const expandedImages: JSX.Element[] = 
         projectInfo.images.map((image, index) => 
         <div key={index} className='snap-center inline-block p-2 sm:pl-4 sm:pr-4 h-[25vh]'><img className='w-full h-full object-cover rounded-2xl' src={image} /></div>);
 
+    // Houses JSX of a project in its expanded view.
     const expandedCard: JSX.Element = 
         <div className='p-4 w-full scroll-mt-28' ref={expandedCardRef} onLoad={handleCardExpansion}>
             <Card className='bg-gray-900 text-white rounded-2xl'>
@@ -62,6 +73,10 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
     return (<>{expanded ? expandedCard : condensedCard}</>);
 }
 
+/**
+ * Displays projects that have been worked on over time in expanded/compressed card views.
+ * @returns section of the page that houses all non-work projects.
+ */
 function Projects() {
     const projectCards = projects.map((project, index) => <Project key={index} projectInfo={project}></Project>)
 
@@ -69,9 +84,7 @@ function Projects() {
         <section className="flex flex-col sm:pl-24 sm:pr-24 p-4">
             <h1 className="text-4xl font-semibold">Notable Projects</h1>
             <h2 className="text-2xl">These are projects I have worked on that are not involved with work.</h2>
-            <div className="flex flex-wrap justify-evenly">
-                {projectCards}
-            </div>
+            <div className="flex flex-wrap justify-evenly">{projectCards}</div>
         </section>
     );
 }

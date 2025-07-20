@@ -5,8 +5,11 @@ import Work from "./Work"
 import Projects from "./Projects"
 import { ThemeProvider } from "./ThemeProvider"
 
+/**
+ * Going from top to bottom, App displays every main section of the webpage.
+ * @returns the entirety of the built React project.
+ */
 function App() {
-
     return (
         <ThemeProvider>
             <Navbar></Navbar>

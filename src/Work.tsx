@@ -10,7 +10,11 @@ import { AccordionDetails, AccordionSummary } from '@mui/material';
 import { IconContext } from 'react-icons';
 import { type JobInfo, jobs } from './constants';
 
-
+/**
+ * This component represents a job that is placed within the Work component's timeline.
+ * @param jobInfo houses information of each job. Allows for scalable Work section.
+ * @returns MUI Accordion that displays information of each job.
+ */
 function Job({ jobInfo }: { jobInfo: JobInfo }) {
     return (
         <Accordion className="bg-gray-900 text-white">
@@ -42,7 +46,12 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
     );
 }
 
+/**
+ * Component that talks about previous employment experience.
+ * @returns work timeline section of the page.
+ */
 function Work() {
+    // Holds MUI TimelinItems for each job.
     const timeLineItems = jobs.map((job, index) => {
         return (
             <TimelineItem key={index}>

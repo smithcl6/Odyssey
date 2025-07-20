@@ -1,5 +1,9 @@
 import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
+/**
+ * This component simply houses the hero section of the page.
+ * @returns The Hero section of the page.
+ */
 function Hero() {
     return (
         <section className="hero flex p-4 pt-24 sm:p-24 bg-cover bg-center min-h-screen">

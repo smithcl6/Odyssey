@@ -4,7 +4,6 @@
 @custom-variant mario (&:where(.mario, .mario *));
 
 @layer base {
-
     button, select {
         @apply cursor-pointer;
     }
@@ -23,6 +22,7 @@
 }
 
 @layer components {
+    /* Sets background to use an image based on the chosen theme. */
     .hero {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("src/assets/hero.jpg");
         @variant zelda {
@@ -38,6 +38,7 @@
     }
 }
 
+/* MUI classes that need to be altered. */
 @layer utilities {
     .MuiMenu-paper {
         @apply bg-gray-700 rounded-2xl;
