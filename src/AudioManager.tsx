@@ -47,7 +47,7 @@ function AudioManager() {
 
     return (
         <>
-            <button className="bg-gray-800 hover:bg-gray-700 rounded-r-2xl" onClick={handleMusicState}>
+            <button className="bg-gray-800 hover:bg-gray-700 rounded-r-2xl p-2" onClick={handleMusicState}>
                 <MusicIcon />
             </button>
             <audio ref={audioRef} autoPlay={autoPlay} src={audioSource} loop onPlay={() => setAutoPlay(true)} onPause={() => setAutoPlay(false)}></audio>

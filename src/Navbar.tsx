@@ -33,17 +33,17 @@ function Navbar() {
     );
 
     return (
-        <header className="flex justify-end p-2 sm:p-8 fixed w-screen bg-transparent">
-            <span className="flex">
-            <Select
+        <header className="flex justify-end w-screen">
+            <span className="flex fixed z-10 p-4 sm:p-8">
+                <Select
                     className="text-white bg-gray-800 hover:bg-gray-700 text-4xl rounded-l-2xl"
-                name="Theme"
-                value={themeContext.theme}
-                onChange={(value) => themeContext.setTheme(value.target.value)}
-                notched
-            >
-                {options}
-            </Select>
+                    name="Theme"
+                    value={themeContext.theme}
+                    onChange={(value) => themeContext.setTheme(value.target.value)}
+                    notched
+                >
+                    {options}
+                </Select>
                 <AudioManager />
             </span>
         </header>
