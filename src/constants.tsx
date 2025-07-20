@@ -108,14 +108,12 @@ export const projects: ProjectInfo[] = [
             I was a member of the DevOps team. The DevOps team was responsible for creating an employee portal
             that integrated work from the data team into the website.`,
             `Given that I had years of DevOps experience under my belt, I took on the position of team lead.
-            I was responsible for delegating tasks to the others in the dev team as well as lead agile processes such as standup.
-            The other three members of the dev team were Kenton Andrews and Xavier Miles as software developers, and 
-            Maddison Pippert as our UI/UX Designer.`,
+            I was responsible for delegating tasks to the other three members in the dev team as well as lead agile processes such as standup.`,
             `Before we could begin development of the website, we needed to decide on a tech stack and make sure we knew what
             we were doing to a certain extent. This resulted in the first few weeks being primarily dedicated to teaching/learning.
             This included technologies like Git, HTML, CSS, JavaScript, REST, and eventually Angular.`,
             `Regarding development, I was solely responsible for the project back end, front-end authentication, and finally deployment.
-            During this time, I learned how to use Express, Nginx, and how cookie authentication works.`,
+            During this time, I gained some experience using Express, Nginx, and cookie-based authentication.`,
             `In the end, with an Angular front end, and an Express and MySQL back end, we were able to deploy the website utilizing Nginx
             on the Maxx Energy Server. With that said, the server lifetime did not extend beyond the work simulator, so it was only
             live for about a week in total.`,
@@ -140,7 +138,7 @@ export const projects: ProjectInfo[] = [
             'src/assets/capstone-winner.png',
         ],
         summary: `Full-stack web application that evaluates prewriting skills and has been used by the 
-                    VCU department of Occupational Therapy. 1st place team at the VCU Capstone of 2023.`,
+                    VCU Department of Occupational Therapy. 1st place team at the VCU Capstone of 2023.`,
         details: [
             `This project was based on an application developed by our project sponsor, Dr. Virginia Chu.
             She had created a custom program that could help evaluate prewriting skills,
