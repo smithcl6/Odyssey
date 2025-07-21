@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
+import Resume from '/src/assets/resume.pdf';
 
 /**
  * This component simply houses the hero section of the page.
@@ -22,7 +23,7 @@ function Hero() {
                     <a className="hero-links hover:text-blue-600" href='https://www.linkedin.com/in/csmith1414/' title="Linkedin" target='_blank' rel='noopener noreferrer'>
                         <FaLinkedin /><h1 className="text-xl sm:text-4xl">Linkedin</h1>
                     </a>
-                    <a className="hero-links hover:text-emerald-600" href='src/assets/resume.pdf' title="Resume" target='_blank' rel='noopener noreferrer'>
+                    <a className="hero-links hover:text-emerald-600" href={Resume} title="Resume" target='_blank' rel='noopener noreferrer'>
                         <FaFilePdf /><h1 className="text-xl sm:text-4xl">Resume</h1>
                     </a>
                 </span>
