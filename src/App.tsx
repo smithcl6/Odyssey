@@ -1,4 +1,4 @@
-import About from "./About"
+// import About from "./About"
 import Hero from "./Hero"
 import Navbar from "./Navbar"
 import Work from "./Work"
@@ -14,7 +14,7 @@ function App() {
         <ThemeProvider>
             <Navbar></Navbar>
             <Hero></Hero>
-            <About></About>
+            {/* <About></About> */}
             <Work></Work>
             <Projects></Projects>
         </ThemeProvider>
