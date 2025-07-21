@@ -5,6 +5,16 @@ import { SiAngular, SiExpress, SiFlask, SiMysql } from "react-icons/si";
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
+import AMCTechLogo from '/src/assets/amc-tech-logo.jpg';
+import MaxxEnergyHome from '/src/assets/maxx-energy-home.png';
+import MaxxEnergyLogin from '/src/assets/maxx-energy-login.png';
+import MaxxEnergyData from '/src/assets/maxx-energy-data.png';
+import CapstonePoster from '/src/assets/capstone-poster.png';
+import CapstoneTeam from '/src/assets/capstone-team.jpg';
+import CapstoneWinner from '/src/assets/capstone-winner.png';
+import MarioOdyssey from '/src/assets/mario-odyssey.jpg';
+import OoT from '/src/assets/oot.png';
+import Hero from '/src/assets/hero.jpg';
 
 /* 
 This file's purpose is to hold information that is designed to
@@ -27,7 +37,7 @@ export interface JobInfo {
 export const jobs: JobInfo[] = [
     {
         title: 'Software Engineer',
-        icon: 'src/assets/amc-tech-logo.jpg',
+        icon: AMCTechLogo,
         company: 'AMC Technology',
         website: 'https://www.amctechnology.com/',
         timeframe: 'January 2024 — July 2024',
@@ -53,7 +63,7 @@ export const jobs: JobInfo[] = [
     },
     {
         title: 'Software Development Intern',
-        icon: 'src/assets/amc-tech-logo.jpg',
+        icon: AMCTechLogo,
         company: 'AMC Technology',
         website: 'https://www.amctechnology.com/',
         timeframe: 'June 2021 — December 2023',
@@ -103,9 +113,9 @@ export const projects: ProjectInfo[] = [
     {
         title: 'Maxx Energy Employee Portal',
         images: [
-            'src/assets/maxx-energy-home.png',
-            'src/assets/maxx-energy-login.png',
-            'src/assets/maxx-energy-data.png',
+            MaxxEnergyHome,
+            MaxxEnergyLogin,
+            MaxxEnergyData,
         ],
         summary: `Full-stack website for a fictional company.
                     It was built as part of a Work Simulator.`,
@@ -141,9 +151,9 @@ export const projects: ProjectInfo[] = [
     {
         title: 'Capstone Prewriting Evaluation Web App',
         images: [
-            'src/assets/capstone-poster.png',
-            'src/assets/capstone-team.jpg',
-            'src/assets/capstone-winner.png',
+            CapstonePoster,
+            CapstoneTeam,
+            CapstoneWinner,
         ],
         summary: `Full-stack web application that evaluates prewriting skills and has been used by the 
                     VCU Department of Occupational Therapy. 1st place team at the VCU Capstone of 2023.`,
@@ -183,9 +193,9 @@ export const projects: ProjectInfo[] = [
     {
         title: 'Odyssey',
         images: [
-            'src/assets/mario-odyssey.jpg',
-            'src/assets/oot.png',
-            'src/assets/hero.jpg',
+            MarioOdyssey,
+            OoT,
+            Hero,
         ],
         summary: `The website you are currently on! Built with React and Tailwind, 
                     this project serves as my professional portfolio.`,

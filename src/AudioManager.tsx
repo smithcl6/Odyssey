@@ -1,5 +1,8 @@
 import { useContext, useRef, useState } from "react";
 import { ThemeContext, type Theme } from "./ThemeContext";
+import TrophyGallery from '/src/assets/trophy-gallery.mp3';
+import ZeldaFileSelect from '/src/assets/zelda-file-select.mp3';
+import MarioBubblaineUnderwater from '/src/assets/mario-bubblaine-underwater.mp3';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 
@@ -19,15 +22,15 @@ function AudioManager() {
     const musicList: Music[] = [
         {
             theme: 'dark',
-            filePath: '/src/assets/trophy-gallery.mp3'
+            filePath: TrophyGallery
         },
         {
             theme: 'zelda',
-            filePath: '/src/assets/zelda-file-select.mp3'
+            filePath: ZeldaFileSelect
         },
         {
             theme: 'mario',
-            filePath: '/src/assets/mario-bubblaine-underwater.mp3'
+            filePath: MarioBubblaineUnderwater
         }
     ];
 
