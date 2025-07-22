@@ -1,9 +1,9 @@
 // import About from "./About"
-import Hero from "./Hero"
-import Navbar from "./Navbar"
-import Work from "./Work"
-import Projects from "./Projects"
-import { ThemeProvider } from "./ThemeProvider"
+import Hero from './Hero';
+import Navbar from './Navbar';
+import Work from './Work';
+import Projects from './Projects';
+import { ThemeProvider } from './ThemeProvider';
 
 /**
  * Going from top to bottom, App displays every main section of the webpage.
@@ -18,7 +18,7 @@ function App() {
             <Work></Work>
             <Projects></Projects>
         </ThemeProvider>
-    )
+    );
 }
 
-export default App
+export default App;

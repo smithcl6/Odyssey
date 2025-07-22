@@ -1,5 +1,5 @@
-import { useContext, useRef, useState } from "react";
-import { ThemeContext, type Theme } from "./ThemeContext";
+import { useContext, useRef, useState } from 'react';
+import { ThemeContext, type Theme } from './ThemeContext';
 import TrophyGallery from '/src/assets/trophy-gallery.mp3';
 import ZeldaFileSelect from '/src/assets/zelda-file-select.mp3';
 import MarioBubblaineUnderwater from '/src/assets/mario-bubblaine-underwater.mp3';
@@ -22,28 +22,30 @@ function AudioManager() {
     const musicList: Music[] = [
         {
             theme: 'dark',
-            filePath: TrophyGallery
+            filePath: TrophyGallery,
         },
         {
             theme: 'zelda',
-            filePath: ZeldaFileSelect
+            filePath: ZeldaFileSelect,
         },
         {
             theme: 'mario',
-            filePath: MarioBubblaineUnderwater
-        }
+            filePath: MarioBubblaineUnderwater,
+        },
     ];
 
-    const audioSource: string = musicList.find(item => item.theme === themeContext.theme)?.filePath ?? musicList[0].theme;
+    const audioSource: string =
+        musicList.find((item) => item.theme === themeContext.theme)?.filePath ??
+        musicList[0].theme;
 
     /**
      * @returns Appropriate icon depending on if music is playing or not.
      */
     function MusicIcon() {
         if (audioRef.current?.paused === false) {
-            return <MusicNoteIcon className="text-4xl" />;
+            return <MusicNoteIcon className='text-4xl' />;
         } else {
-            return <MusicOffIcon className="text-4xl" />;
+            return <MusicOffIcon className='text-4xl' />;
         }
     }
 
@@ -60,10 +62,20 @@ function AudioManager() {
 
     return (
         <>
-            <button className="bg-gray-800 hover:bg-gray-700 rounded-r-2xl p-2" onClick={handleMusicState}>
+            <button
+                className='rounded-r-2xl bg-gray-800 p-2 hover:bg-gray-700'
+                onClick={handleMusicState}
+            >
                 <MusicIcon />
             </button>
-            <audio ref={audioRef} autoPlay={autoPlay} src={audioSource} loop onPlay={() => setAutoPlay(true)} onPause={() => setAutoPlay(false)}></audio>
+            <audio
+                ref={audioRef}
+                autoPlay={autoPlay}
+                src={audioSource}
+                loop
+                onPlay={() => setAutoPlay(true)}
+                onPause={() => setAutoPlay(false)}
+            ></audio>
         </>
     );
 }

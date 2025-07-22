@@ -1,7 +1,7 @@
-import type { JSX } from "react";
-import { DiNginx } from "react-icons/di";
-import { FaGitAlt, FaGithub, FaNpm, FaReact } from "react-icons/fa";
-import { SiAngular, SiExpress, SiFlask, SiMysql } from "react-icons/si";
+import type { JSX } from 'react';
+import { DiNginx } from 'react-icons/di';
+import { FaGitAlt, FaGithub, FaNpm, FaReact } from 'react-icons/fa';
+import { SiAngular, SiExpress, SiFlask, SiMysql } from 'react-icons/si';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
@@ -24,14 +24,14 @@ the component separate from its content, which improves scalability.
 
 // Information that should be included for each job experience.
 export interface JobInfo {
-    title: string,
-    icon: string,
-    company: string,
-    website: string,
-    timeframe: string,
-    details: string[],
-    tech: JSX.Element[]
-};
+    title: string;
+    icon: string;
+    company: string;
+    website: string;
+    timeframe: string;
+    details: string[];
+    tech: JSX.Element[];
+}
 
 // List of JobInfo objects. They are used to dynamically populate the Work Component.
 export const jobs: JobInfo[] = [
@@ -59,7 +59,7 @@ export const jobs: JobInfo[] = [
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VS Code' title='VS Code' />,
             <AiOutlineDotNet key='.NET' title='.NET' />,
-        ]
+        ],
     },
     {
         title: 'Software Development Intern',
@@ -85,7 +85,7 @@ export const jobs: JobInfo[] = [
             suit the needs of AMC.`,
             `Summer 2021: Developed an ROI Calculator in the AMC Technology website.
             Clients that were interested were also able to directly contact AMC through the app.
-            The project was made using HTML, CSS, JavaScript, and Microsoft Power Automate.`
+            The project was made using HTML, CSS, JavaScript, and Microsoft Power Automate.`,
         ],
         tech: [
             <SiAngular key='Angular' title='Angular' />,
@@ -94,29 +94,25 @@ export const jobs: JobInfo[] = [
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VSCode' title='VS Code' />,
             <AiOutlineDotNet key='.NET' title='.NET' />,
-        ]
+        ],
     },
 ];
 
 // Information that should be included in personal projects.
 export interface ProjectInfo {
-    title: string,
-    images: string[],
-    summary: string,
-    details: string[],
-    tech: JSX.Element[],
-    repo?: string
+    title: string;
+    images: string[];
+    summary: string;
+    details: string[];
+    tech: JSX.Element[];
+    repo?: string;
 }
 
 // List of ProjectInfo objects. They are used to dynamically populate the Projects Component.
 export const projects: ProjectInfo[] = [
     {
         title: 'Maxx Energy Employee Portal',
-        images: [
-            MaxxEnergyHome,
-            MaxxEnergyLogin,
-            MaxxEnergyData,
-        ],
+        images: [MaxxEnergyHome, MaxxEnergyLogin, MaxxEnergyData],
         summary: `Full-stack website for a fictional company.
                     It was built as part of a Work Simulator.`,
         details: [
@@ -140,21 +136,17 @@ export const projects: ProjectInfo[] = [
             <SiAngular key='Angular' title='Angular' />,
             <FaGitAlt key='Git' title='Git' />,
             <FaGithub key='GitHub' title='GitHub' />,
-            <SiExpress key='Express' title="Express" />,
+            <SiExpress key='Express' title='Express' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VS Code' title='VS Code' />,
             <DiNginx key='Nginx' title='Nginx' />,
             <SiMysql key='MySQL' title='MySQL' />,
         ],
-        repo: 'https://github.com/smithcl6/maxx-energy'
+        repo: 'https://github.com/smithcl6/maxx-energy',
     },
     {
         title: 'Capstone Prewriting Evaluation Web App',
-        images: [
-            CapstonePoster,
-            CapstoneTeam,
-            CapstoneWinner,
-        ],
+        images: [CapstonePoster, CapstoneTeam, CapstoneWinner],
         summary: `Full-stack web application that evaluates prewriting skills and has been used by the 
                     VCU Department of Occupational Therapy. 1st place team at the VCU Capstone of 2023.`,
         details: [
@@ -178,7 +170,7 @@ export const projects: ProjectInfo[] = [
             Noah Shields, Edward Ladia, and myself on the right. All four of us are now VCU Computer Science Graduates. 
             Additionally, our faculty advisor was Professor Daniel Cranston.
             As aformentioned, our sponsor was Dr. Virginia Chu.`,
-            `Unfortunately, the GitHub repository for this project must remain private.`
+            `Unfortunately, the GitHub repository for this project must remain private.`,
         ],
         tech: [
             <FaReact key='React' title='React' />,
@@ -192,18 +184,14 @@ export const projects: ProjectInfo[] = [
     },
     {
         title: 'Odyssey',
-        images: [
-            MarioOdyssey,
-            OoT,
-            Hero,
-        ],
+        images: [MarioOdyssey, OoT, Hero],
         summary: `The website you are currently on! Built with React and Tailwind, 
                     this project serves as my professional portfolio.`,
         details: [
             `I needed a professional portfolio. Why not get some practice with React and learn how to use Tailwind while at it?`,
             `The project name, "Odyssey" is indeed a reference to Super Mario Odyssey. 
             While I will not be traveling to different kingdoms and fighting Bowser, I will be tracking experiences and projects here.`,
-            `Attributions to different artwork are mentioned in this project's README.`
+            `Attributions to different artwork are mentioned in this project's README.`,
         ],
         tech: [
             <FaReact key='React' title='React' />,
@@ -213,6 +201,6 @@ export const projects: ProjectInfo[] = [
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VS Code' title='VS Code' />,
         ],
-        repo: 'https://github.com/smithcl6/Odyssey'
+        repo: 'https://github.com/smithcl6/Odyssey',
     },
 ];

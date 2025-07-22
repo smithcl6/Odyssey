@@ -11,8 +11,6 @@
     html {
         @apply bg-black text-white;
     }
-
-
 }
 
 @layer components {
