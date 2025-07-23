@@ -1,5 +1,6 @@
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
+import CloseIcon from '@mui/icons-material/Close';
 import { CardContent, CardMedia } from '@mui/material';
 import Card from '@mui/material/Card';
 import { useRef, useState, type JSX } from 'react';
@@ -58,9 +59,10 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                 <h6 className='p-4 text-lg'>{projectInfo.summary}</h6>
                 <CardContent className='flex justify-between'>
                     {github}
-                    <button onClick={() => setExpanded(!expanded)}>
-                        <OpenInFullIcon />
-                    </button>
+                    <OpenInFullIcon
+                        className='cursor-pointer self-end'
+                        onClick={() => setExpanded(!expanded)}
+                    />
                 </CardContent>
             </Card>
         </div>
@@ -90,10 +92,17 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
             onLoad={handleCardExpansion}
         >
             <Card className='rounded-2xl bg-gray-900 text-white'>
-                <CardContent className='flex flex-col'>
+                <CardContent className='flex items-center justify-between'>
+                    {github}
                     <h5 className='p-2 text-center text-lg font-bold lg:text-2xl 2xl:text-3xl'>
                         {projectInfo.title}
                     </h5>
+                    <CloseIcon
+                        className='cursor-pointer self-start'
+                        onClick={() => setExpanded(!expanded)}
+                    />
+                </CardContent>
+                <CardContent className='flex flex-col'>
                     <div className='flex justify-center'>
                         <span className='snap-x overflow-x-auto whitespace-nowrap'>
                             {expandedImages}
@@ -124,9 +133,10 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                         ))}
                     </span>
                     <span className='flex justify-end'>
-                        <button onClick={() => setExpanded(!expanded)}>
-                            <CloseFullscreenIcon />
-                        </button>
+                        <CloseFullscreenIcon
+                            className='cursor-pointer'
+                            onClick={() => setExpanded(!expanded)}
+                        />
                     </span>
                 </CardContent>
             </Card>
