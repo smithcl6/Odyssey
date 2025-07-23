@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import { useRef, useState, type JSX } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { type ProjectInfo, projects } from './constants';
+import InspectedImage from './InspectedImage';
 
 /**
  * Takes information of each project and displays them in an expanded or collapsed card view.
@@ -13,6 +14,7 @@ import { type ProjectInfo, projects } from './constants';
  */
 function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
     const [expanded, setExpanded] = useState(false);
+    const [inspectedImage, setInspectedImage] = useState('');
     const expandedCardRef = useRef<HTMLDivElement | null>(null);
 
     /**
@@ -48,9 +50,10 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                     {projectInfo.title}
                 </h5>
                 <CardMedia
-                    className='w-full rounded-4xl object-cover p-4'
+                    className='w-full cursor-pointer rounded-4xl object-cover p-4'
                     component='img'
                     image={projectInfo.images[0]}
+                    onClick={() => setExpanded(!expanded)}
                 />
                 <h6 className='p-4 text-lg'>{projectInfo.summary}</h6>
                 <CardContent className='flex justify-between'>
@@ -71,8 +74,9 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                 className='inline-block h-[25vh] snap-center p-2 sm:pr-4 sm:pl-4'
             >
                 <img
-                    className='h-full w-full rounded-2xl object-cover'
+                    className='h-full w-full cursor-pointer rounded-2xl object-cover'
                     src={image}
+                    onClick={() => setInspectedImage(image)}
                 />
             </div>
         ),
@@ -93,6 +97,10 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                     <div className='flex justify-center'>
                         <span className='snap-x overflow-x-auto whitespace-nowrap'>
                             {expandedImages}
+                            <InspectedImage
+                                inspectedImage={inspectedImage}
+                                setInspectedImage={setInspectedImage}
+                            />
                         </span>
                     </div>
                     <h6 className='pt-4 text-lg font-bold'>Project Details</h6>
