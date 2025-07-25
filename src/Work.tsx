@@ -7,7 +7,6 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import Accordion from '@mui/material/Accordion';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { AccordionDetails, AccordionSummary } from '@mui/material';
-import { IconContext } from 'react-icons';
 import { type JobInfo, jobs } from './constants';
 
 /**
@@ -55,17 +54,15 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
                 </ul>
                 <h6 className='text-lg font-bold'>Tech Used</h6>
                 <span className='flex flex-wrap justify-evenly'>
-                    <IconContext value={{ className: 'text-9xl p-2' }}>
-                        {jobInfo.tech?.map((tech) => (
-                            <div
-                                className='flex flex-col items-center'
-                                key={tech.key}
-                            >
-                                {tech}
-                                <h6>{tech.key}</h6>
-                            </div>
-                        ))}
-                    </IconContext>
+                    {jobInfo.tech?.map((tech) => (
+                        <div
+                            className='flex flex-col items-center p-2'
+                            key={tech.key}
+                        >
+                            <div className='text-7xl sm:text-9xl'>{tech}</div>
+                            <h6>{tech.key}</h6>
+                        </div>
+                    ))}
                 </span>
             </AccordionDetails>
         </Accordion>

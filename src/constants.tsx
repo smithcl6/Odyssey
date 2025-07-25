@@ -1,7 +1,14 @@
 import type { JSX } from 'react';
 import { DiNginx } from 'react-icons/di';
 import { FaGitAlt, FaGithub, FaNpm, FaReact } from 'react-icons/fa';
-import { SiAngular, SiExpress, SiFlask, SiMysql } from 'react-icons/si';
+import {
+    SiAngular,
+    SiExpress,
+    SiFlask,
+    SiMui,
+    SiMysql,
+    SiVite,
+} from 'react-icons/si';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
@@ -55,10 +62,10 @@ export const jobs: JobInfo[] = [
         tech: [
             <SiAngular key='Angular' title='Angular' />,
             <VscAzure key='Azure' title='Azure' />,
+            <AiOutlineDotNet key='.NET' title='.NET' />,
             <FaGitAlt key='Git' title='Git' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VS Code' title='VS Code' />,
-            <AiOutlineDotNet key='.NET' title='.NET' />,
         ],
     },
     {
@@ -90,10 +97,10 @@ export const jobs: JobInfo[] = [
         tech: [
             <SiAngular key='Angular' title='Angular' />,
             <VscAzure key='Azure' title='Azure' />,
+            <AiOutlineDotNet key='.NET' title='.NET' />,
             <FaGitAlt key='Git' title='Git' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VSCode' title='VS Code' />,
-            <AiOutlineDotNet key='.NET' title='.NET' />,
         ],
     },
 ];
@@ -134,13 +141,13 @@ export const projects: ProjectInfo[] = [
         ],
         tech: [
             <SiAngular key='Angular' title='Angular' />,
+            <SiExpress key='Express' title='Express' />,
+            <SiMysql key='MySQL' title='MySQL' />,
+            <DiNginx key='Nginx' title='Nginx' />,
             <FaGitAlt key='Git' title='Git' />,
             <FaGithub key='GitHub' title='GitHub' />,
-            <SiExpress key='Express' title='Express' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VS Code' title='VS Code' />,
-            <DiNginx key='Nginx' title='Nginx' />,
-            <SiMysql key='MySQL' title='MySQL' />,
         ],
         repo: 'https://github.com/smithcl6/maxx-energy',
     },
@@ -175,11 +182,11 @@ export const projects: ProjectInfo[] = [
         tech: [
             <FaReact key='React' title='React' />,
             <SiFlask key='Flask' title='Flask' />,
+            <SiMysql key='MySQL' title='MySQL' />,
             <FaGitAlt key='Git' title='Git' />,
             <FaGithub key='GitHub' title='GitHub' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VS Code' title='VS Code' />,
-            <SiMysql key='MySQL' title='MySQL' />,
         ],
     },
     {
@@ -196,6 +203,8 @@ export const projects: ProjectInfo[] = [
         tech: [
             <FaReact key='React' title='React' />,
             <RiTailwindCssFill key='Tailwind' title='Tailwind' />,
+            <SiVite key='Vite' title='Vite' />,
+            <SiMui key='Material UI' title='Material UI' />,
             <FaGitAlt key='Git' title='Git' />,
             <FaGithub key='GitHub' title='GitHub' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,

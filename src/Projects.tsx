@@ -124,10 +124,12 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                     <span className='flex flex-wrap justify-evenly'>
                         {projectInfo.tech?.map((tech) => (
                             <div
-                                className='flex flex-col items-center'
+                                className='flex flex-col items-center p-2'
                                 key={tech.key}
                             >
-                                <div className='p-2 text-9xl'>{tech}</div>
+                                <div className='text-7xl sm:text-9xl'>
+                                    {tech}
+                                </div>
                                 <h6>{tech.key}</h6>
                             </div>
                         ))}
