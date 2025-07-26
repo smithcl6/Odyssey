@@ -7,7 +7,7 @@ import Resume from '/src/assets/resume.pdf';
  */
 function Hero() {
     return (
-        <section className='hero flex min-h-screen bg-cover bg-center p-4 pt-24 sm:p-24'>
+        <section className='hero flex min-h-screen bg-cover p-4 pt-24 sm:p-24'>
             <div className='flex flex-col'>
                 <h1 className='zelda:text-amber-500 mario:text-red-500 p-2 font-bold text-purple-400'>
                     Christopher Smith

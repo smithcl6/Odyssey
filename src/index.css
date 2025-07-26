@@ -54,11 +54,14 @@
     /* Sets background to use an image based on the chosen theme. */
     .hero {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/hero.jpg");
+        background-position: center;
         @variant zelda {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/oot.png");
+            background-position: 65%;
         }
         @variant mario {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/mario-odyssey.jpg");
+            background-position: 80%;
         }
     }
 
