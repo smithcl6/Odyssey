@@ -37,7 +37,7 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
             target='_blank'
             rel='noopener noreferrer'
         >
-            <FaGithub />
+            <FaGithub className='small-icon' />
         </a>
     ) : (
         <span></span>
@@ -47,20 +47,20 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
     const condensedCard: JSX.Element = (
         <div className='p-4 md:w-1/2 xl:w-1/3'>
             <Card className='flex h-full flex-col justify-between rounded-2xl bg-gray-900 text-white'>
-                <h5 className='p-2 text-center text-lg font-bold md:text-2xl lg:text-xl'>
+                <h4 className='p-2 text-center font-bold'>
                     {projectInfo.title}
-                </h5>
+                </h4>
                 <CardMedia
                     className='w-full cursor-pointer rounded-4xl object-cover p-4'
                     component='img'
                     image={projectInfo.images[0]}
                     onClick={() => setExpanded(!expanded)}
                 />
-                <h6 className='p-4 text-lg'>{projectInfo.summary}</h6>
+                <p className='p-4'>{projectInfo.summary}</p>
                 <CardContent className='flex justify-between'>
                     {github}
                     <OpenInFullIcon
-                        className='cursor-pointer self-end'
+                        className='small-icon cursor-pointer self-end'
                         onClick={() => setExpanded(!expanded)}
                     />
                 </CardContent>
@@ -94,11 +94,11 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
             <Card className='rounded-2xl bg-gray-900 text-white'>
                 <CardContent className='flex items-center justify-between'>
                     {github}
-                    <h5 className='p-2 text-center text-lg font-bold lg:text-2xl 2xl:text-3xl'>
+                    <h5 className='p-2 text-center font-bold'>
                         {projectInfo.title}
                     </h5>
                     <CloseIcon
-                        className='cursor-pointer self-start'
+                        className='small-icon cursor-pointer self-start'
                         onClick={() => setExpanded(!expanded)}
                     />
                 </CardContent>
@@ -112,31 +112,29 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
                             />
                         </span>
                     </div>
-                    <h6 className='pt-4 text-lg font-bold'>Project Details</h6>
+                    <h4 className='pt-4 font-bold'>Project Details</h4>
                     <ul className='list-disc p-4' id='details'>
                         {projectInfo.details.map((details, index) => (
                             <li className='p-1' key={index}>
-                                {details}
+                                <p>{details}</p>
                             </li>
                         ))}
                     </ul>
-                    <h6 className='text-lg font-bold'>Tech Used</h6>
+                    <h4 className='font-bold'>Tech Used</h4>
                     <span className='flex flex-wrap justify-evenly'>
                         {projectInfo.tech?.map((tech) => (
                             <div
                                 className='flex flex-col items-center p-2'
                                 key={tech.key}
                             >
-                                <div className='text-7xl sm:text-9xl'>
-                                    {tech}
-                                </div>
-                                <h6>{tech.key}</h6>
+                                <div className='large-icon'>{tech}</div>
+                                <h5>{tech.key}</h5>
                             </div>
                         ))}
                     </span>
                     <span className='flex justify-end'>
                         <CloseFullscreenIcon
-                            className='cursor-pointer'
+                            className='small-icon cursor-pointer'
                             onClick={() => setExpanded(!expanded)}
                         />
                     </span>
@@ -154,16 +152,16 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
  */
 function Projects() {
     const projectCards = projects.map((project, index) => (
-        <Project key={index} projectInfo={project}></Project>
+        <Project key={index} projectInfo={project} />
     ));
 
     return (
         <section className='flex flex-col p-4 sm:pr-24 sm:pl-24'>
-            <h1 className='text-4xl font-semibold'>Notable Projects</h1>
-            <h2 className='text-2xl'>
+            <h2 className='font-semibold'>Notable Projects</h2>
+            <h4>
                 These are projects I have worked on that are not involved with
                 work.
-            </h2>
+            </h4>
             <div className='flex flex-wrap justify-evenly'>{projectCards}</div>
         </section>
     );

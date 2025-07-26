@@ -33,34 +33,30 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
                         />
                     </a>
                     <span className='flex w-2/3 flex-col justify-between sm:w-3/4 sm:flex-row'>
-                        <h5 className='p-2 text-lg lg:text-2xl 2xl:text-3xl'>
-                            {jobInfo.title}
-                        </h5>
-                        <h5 className='p-2 text-lg lg:text-2xl 2xl:text-3xl'>
-                            {jobInfo.timeframe}
-                        </h5>
+                        <h4 className='p-2'>{jobInfo.title}</h4>
+                        <h4 className='p-2'>{jobInfo.timeframe}</h4>
                     </span>
                 </div>
             </AccordionSummary>
             <AccordionDetails>
-                <h6 className='text-lg font-extrabold'>{jobInfo.company}</h6>
-                <h6 className='pt-4 text-lg font-bold'>Job Details</h6>
+                <h4 className='font-extrabold'>{jobInfo.company}</h4>
+                <h4 className='pt-4 font-bold'>Job Details</h4>
                 <ul className='list-disc p-4' id='details'>
                     {jobInfo.details.map((detail, index) => (
                         <li className='p-1' key={index}>
-                            {detail}
+                            <p>{detail}</p>
                         </li>
                     ))}
                 </ul>
-                <h6 className='text-lg font-bold'>Tech Used</h6>
+                <h4 className='font-bold'>Tech Used</h4>
                 <span className='flex flex-wrap justify-evenly'>
                     {jobInfo.tech?.map((tech) => (
                         <div
                             className='flex flex-col items-center p-2'
                             key={tech.key}
                         >
-                            <div className='text-7xl sm:text-9xl'>{tech}</div>
-                            <h6>{tech.key}</h6>
+                            <div className='large-icon'>{tech}</div>
+                            <h5>{tech.key}</h5>
                         </div>
                     ))}
                 </span>
@@ -91,7 +87,7 @@ function Work() {
 
     return (
         <section className='flex flex-col sm:pr-24 sm:pl-24'>
-            <h2 className='p-4 text-4xl font-semibold sm:p-0 sm:pt-4 sm:pb-4'>
+            <h2 className='p-4 font-semibold sm:p-0 sm:pt-4 sm:pb-4'>
                 Work Experience
             </h2>
             <Timeline

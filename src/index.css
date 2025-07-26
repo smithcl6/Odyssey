@@ -3,17 +3,54 @@
 @custom-variant zelda (&:where(.zelda, .zelda *));
 @custom-variant mario (&:where(.mario, .mario *));
 
+
 @layer base {
+    html {
+        @apply bg-black text-white;
+    }
+
     button, select {
         @apply cursor-pointer;
     }
 
-    html {
-        @apply bg-black text-white;
+    h1 {
+        @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl;
+    }
+
+    h2 {
+        @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+    }
+
+    h3 {
+        @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+    }
+
+    h4 {
+        @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl;
+    }
+    
+    h5 {
+        @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl;
+    }
+
+    h6 {
+        @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl;
+    }
+
+    p, ul {
+        @apply text-base sm:text-lg md:text-xl lg:text-2xl;
     }
 }
 
 @layer components {
+    .large-icon {
+        @apply text-7xl sm:text-8xl md:text-9xl;
+    }
+    
+    .small-icon {
+        @apply text-3xl sm:text-4xl md:text-5xl;
+    }
+
     /* Sets background to use an image based on the chosen theme. */
     .hero {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/hero.jpg");

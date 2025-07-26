@@ -21,21 +21,21 @@ function Navbar() {
     const themes: ThemeIcon[] = [
         {
             key: 'dark',
-            icon: <CiDark />,
+            icon: <CiDark className='small-icon' />,
         },
         {
             key: 'zelda',
-            icon: <GiTriforce />,
+            icon: <GiTriforce className='small-icon' />,
         },
         {
             key: 'mario',
-            icon: <GiSuperMushroom />,
+            icon: <GiSuperMushroom className='small-icon' />,
         },
     ];
 
     const options = themes.map((theme) => (
         <MenuItem
-            className='flex justify-center text-4xl text-white hover:bg-gray-600'
+            className='flex justify-center text-white hover:bg-gray-600'
             key={theme.key}
             value={theme.key}
         >
@@ -47,7 +47,7 @@ function Navbar() {
         <header className='flex w-screen justify-end'>
             <span className='fixed z-10 flex p-4 sm:p-8'>
                 <Select
-                    className='rounded-l-2xl bg-gray-800 text-4xl text-white hover:bg-gray-700'
+                    className='rounded-l-2xl bg-gray-800 text-white hover:bg-gray-700'
                     name='Theme'
                     value={themeContext.theme}
                     onChange={(value) =>

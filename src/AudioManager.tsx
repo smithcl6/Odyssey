@@ -43,9 +43,9 @@ function AudioManager() {
      */
     function MusicIcon() {
         if (audioRef.current?.paused === false) {
-            return <MusicNoteIcon className='text-4xl' />;
+            return <MusicNoteIcon className='small-icon' />;
         } else {
-            return <MusicOffIcon className='text-4xl' />;
+            return <MusicOffIcon className='small-icon' />;
         }
     }
 
