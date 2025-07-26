@@ -156,7 +156,7 @@ function Projects() {
     ));
 
     return (
-        <section className='flex flex-col p-4 sm:pr-24 sm:pl-24'>
+        <section>
             <h2 className='font-semibold'>Notable Projects</h2>
             <h4>
                 These are projects I have worked on that are not involved with

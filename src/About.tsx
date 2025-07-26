@@ -1,6 +1,6 @@
 function About() {
     return (
-        <section className='flex flex-col p-4 sm:pr-24 sm:pl-24'>
+        <section>
             <h2 className='font-semibold'>More About Me.</h2>
             <p className='mt-10'>
                 Professional Stuff Lorem ipsum dolor sit amet, consectetur

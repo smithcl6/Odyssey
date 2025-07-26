@@ -3,7 +3,7 @@
 @custom-variant zelda (&:where(.zelda, .zelda *));
 @custom-variant mario (&:where(.mario, .mario *));
 
-
+/* Styles automatically applied to HTML elements. */
 @layer base {
     html {
         @apply bg-black text-white;
@@ -40,13 +40,19 @@
     p, ul {
         @apply text-base sm:text-lg md:text-xl lg:text-2xl;
     }
+
+    section {
+        @apply flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-14;
+    }
 }
 
 @layer components {
+    /* Sizing for larger svg icons */
     .large-icon {
         @apply text-7xl sm:text-8xl md:text-9xl;
     }
-    
+
+    /* Sizing for smaller svg icons */
     .small-icon {
         @apply text-3xl sm:text-4xl md:text-5xl;
     }
@@ -65,6 +71,7 @@
         }
     }
 
+    /* Styling for external links in the Hero component. */
     .hero-links {
         @apply flex flex-col text-center items-center duration-300 ease-in-out font-bold p-2;
     }

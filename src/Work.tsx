@@ -86,7 +86,7 @@ function Work() {
     });
 
     return (
-        <section className='flex flex-col sm:pr-24 sm:pl-24'>
+        <section>
             <h2 className='p-4 font-semibold sm:p-0 sm:pt-4 sm:pb-4'>
                 Work Experience
             </h2>
