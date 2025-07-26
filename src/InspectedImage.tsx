@@ -20,7 +20,7 @@ function InspectedImage({
             onClose={() => setInspectedImage('')}
         >
             <img
-                className='absolute top-1/2 left-1/2 w-[90vw] -translate-1/2'
+                className='absolute top-1/2 left-1/2 max-h-[90vh] max-w-[90vw] -translate-1/2 object-scale-down'
                 src={inspectedImage}
             />
         </Modal>
