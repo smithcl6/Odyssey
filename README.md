@@ -8,7 +8,7 @@ The project name, "Odyssey" is indeed a reference to Super Mario Odyssey. While 
 ## Music
 - Trophy Gallery – Super Smash Bros. Brawl – Nintendo
 - File Select – The Legend of Zelda: Twilight Princess – Nintendo
-- Bubblaine: Underwater – Super Mario Odyssey – Nintendo
+- Pausing by the Poolside – Super Mario Odyssey – Nintendo
 
 ## Visuals and Images
 - The Legend of Zelda: Ocarina of Time background – Nintendo

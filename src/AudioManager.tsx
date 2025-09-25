@@ -2,7 +2,7 @@ import { useContext, useRef, useState } from 'react';
 import { ThemeContext, type Theme } from './ThemeContext';
 import TrophyGallery from '/src/assets/trophy-gallery.mp3';
 import ZeldaFileSelect from '/src/assets/zelda-file-select.mp3';
-import MarioBubblaineUnderwater from '/src/assets/mario-bubblaine-underwater.mp3';
+import MarioPoolside from '/src/assets/mario-poolside.mp3';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 
@@ -30,7 +30,7 @@ function AudioManager() {
         },
         {
             theme: 'mario',
-            filePath: MarioBubblaineUnderwater,
+            filePath: MarioPoolside,
         },
     ];
 
