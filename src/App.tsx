@@ -14,9 +14,11 @@ function App() {
         <ThemeProvider>
             <Navbar></Navbar>
             <Hero></Hero>
-            {/* <About></About> */}
-            <Work></Work>
-            <Projects></Projects>
+            <div className='bg-body bg-cover'>
+                {/* <About></About> */}
+                <Work></Work>
+                <Projects></Projects>
+            </div>
         </ThemeProvider>
     );
 }

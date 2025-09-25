@@ -16,9 +16,9 @@ import { type JobInfo, jobs } from './constants';
  */
 function Job({ jobInfo }: { jobInfo: JobInfo }) {
     return (
-        <Accordion className='bg-gray-900 text-white'>
+        <Accordion className='bg-color-1 text-theme'>
             <AccordionSummary
-                expandIcon={<ArrowDropDownIcon className='text-white' />}
+                expandIcon={<ArrowDropDownIcon className='text-theme' />}
             >
                 <div className='flex w-full items-center'>
                     <a
@@ -87,7 +87,7 @@ function Work() {
 
     return (
         <section>
-            <h2 className='p-4 font-semibold sm:p-0 sm:pt-4 sm:pb-4'>
+            <h2 className='text-theme p-4 font-semibold sm:p-0 sm:pt-4 sm:pb-4'>
                 Work Experience
             </h2>
             <Timeline

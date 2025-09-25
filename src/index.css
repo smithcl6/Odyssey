@@ -5,10 +5,6 @@
 
 /* Styles automatically applied to HTML elements. */
 @layer base {
-    html {
-        @apply bg-black text-white;
-    }
-
     button, select {
         @apply cursor-pointer;
     }
@@ -47,6 +43,46 @@
 }
 
 @layer components {
+    /* Applies text color based on theme. */
+    .text-theme {
+        @apply text-white;
+        @variant mario {
+            @apply text-black;
+        }
+    }
+
+    /* Background color based on theme. Designed for elements with diverse content. */
+    .bg-color-1 {
+        @apply bg-gray-900;
+        @variant mario {
+            @apply bg-red-50 border-4 border-red-600;
+        }
+    }
+
+    /* Secondary background color; changes based on theme. */
+    .bg-color-2 {
+        @apply bg-gray-800;
+        @variant mario {
+            @apply bg-red-600;
+        }
+    }
+
+    /* Third background color; changes based on theme. */
+    .bg-color-3 {
+        @apply bg-gray-700;        
+        @variant mario {
+            @apply bg-red-500;
+        }
+    }
+
+    /* Fourth background color; changes based on theme. */
+    .bg-color-4 {
+        @apply bg-gray-600;
+        @variant mario {
+            @apply bg-red-400;
+        }
+    }
+
     /* Sizing for larger svg icons */
     .large-icon {
         @apply text-7xl sm:text-8xl md:text-9xl;
@@ -66,7 +102,7 @@
             background-position: 65%;
         }
         @variant mario {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/mario-odyssey.jpg");
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("/src/assets/mario-odyssey.jpg");
             background-position: 80%;
         }
     }
@@ -75,12 +111,24 @@
     .hero-links {
         @apply flex flex-col text-center items-center duration-300 ease-in-out font-bold p-2;
     }
+
+    /* Sets background for everything under the Hero section. */
+    .bg-body {
+        @apply bg-black;
+        @variant mario {
+            background: url("/src/assets/map.jpg");
+            background-position: center;
+        }
+    }
 }
 
 /* MUI classes that need to be altered. */
 @layer utilities {
     .MuiMenu-paper {
         @apply bg-gray-700 rounded-2xl;
+        @variant mario {
+            @apply bg-red-500 rounded-2xl;
+        }
     }
 
     .MuiMenu-list {

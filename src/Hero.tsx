@@ -14,7 +14,7 @@ function Hero() {
             <h2 className='p-2 font-semibold text-blue-400'>
                 Software Developer
             </h2>
-            <h4 className='p-2 font-medium'>
+            <h4 className='p-2 font-medium text-white'>
                 I'm a junior developer with full-stack experience, especially in
                 front-end development using Angular and React. With that said, I
                 am still early in my career and am open-minded to areas outside
@@ -23,7 +23,7 @@ function Hero() {
             </h4>
             <span className='flex flex-wrap justify-around p-4 pt-8'>
                 <a
-                    className='hero-links hover:text-purple-700'
+                    className='hero-links text-white hover:text-purple-700'
                     href='https://github.com/smithcl6'
                     title='GitHub'
                     target='_blank'
@@ -33,7 +33,7 @@ function Hero() {
                     <h2>GitHub</h2>
                 </a>
                 <a
-                    className='hero-links hover:text-blue-600'
+                    className='hero-links text-white hover:text-blue-700'
                     href='https://www.linkedin.com/in/csmith1414/'
                     title='Linkedin'
                     target='_blank'
@@ -43,7 +43,7 @@ function Hero() {
                     <h2>Linkedin</h2>
                 </a>
                 <a
-                    className='hero-links hover:text-emerald-600'
+                    className='hero-links text-white hover:text-emerald-400'
                     href={Resume}
                     title='Resume'
                     target='_blank'

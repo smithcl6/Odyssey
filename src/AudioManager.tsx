@@ -43,9 +43,9 @@ function AudioManager() {
      */
     function MusicIcon() {
         if (audioRef.current?.paused === false) {
-            return <MusicNoteIcon className='small-icon' />;
+            return <MusicNoteIcon className='small-icon text-white' />;
         } else {
-            return <MusicOffIcon className='small-icon' />;
+            return <MusicOffIcon className='small-icon text-white' />;
         }
     }
 
@@ -63,7 +63,7 @@ function AudioManager() {
     return (
         <>
             <button
-                className='rounded-r-2xl bg-gray-800 p-2 hover:bg-gray-700'
+                className='bg-color-2 hover:bg-color-3 rounded-r-2xl p-2'
                 onClick={handleMusicState}
             >
                 <MusicIcon />

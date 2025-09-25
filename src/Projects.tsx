@@ -46,7 +46,7 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
     // Houses JSX of a project in its condensed view.
     const condensedCard: JSX.Element = (
         <div className='p-4 md:w-1/2 xl:w-1/3'>
-            <Card className='flex h-full flex-col justify-between rounded-2xl bg-gray-900 text-white'>
+            <Card className='bg-color-1 text-theme flex h-full flex-col justify-between rounded-2xl'>
                 <h4 className='p-2 text-center font-bold'>
                     {projectInfo.title}
                 </h4>
@@ -91,7 +91,7 @@ function Project({ projectInfo }: { projectInfo: ProjectInfo }) {
             ref={expandedCardRef}
             onLoad={handleCardExpansion}
         >
-            <Card className='rounded-2xl bg-gray-900 text-white'>
+            <Card className='bg-color-1 text-theme rounded-2xl'>
                 <CardContent className='flex items-center justify-between'>
                     {github}
                     <h5 className='p-2 text-center font-bold'>
@@ -157,8 +157,8 @@ function Projects() {
 
     return (
         <section>
-            <h2 className='font-semibold'>Notable Projects</h2>
-            <h4>
+            <h2 className='text-theme font-semibold'>Notable Projects</h2>
+            <h4 className='text-theme'>
                 These are projects I have worked on that are not involved with
                 work.
             </h4>
