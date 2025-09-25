@@ -23,14 +23,14 @@ function Hero() {
             </h4>
             <span className='flex flex-wrap justify-around p-4 pt-8'>
                 <a
-                    className='hero-links text-white hover:text-purple-700'
-                    href='https://github.com/smithcl6'
-                    title='GitHub'
+                    className='hero-links text-white hover:text-emerald-400'
+                    href={Resume}
+                    title='Resume'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    <FaGithub className='large-icon' />
-                    <h2>GitHub</h2>
+                    <FaFilePdf className='large-icon' />
+                    <h2>Resume</h2>
                 </a>
                 <a
                     className='hero-links text-white hover:text-blue-700'
@@ -43,14 +43,14 @@ function Hero() {
                     <h2>Linkedin</h2>
                 </a>
                 <a
-                    className='hero-links text-white hover:text-emerald-400'
-                    href={Resume}
-                    title='Resume'
+                    className='hero-links text-white hover:text-purple-500'
+                    href='https://github.com/smithcl6'
+                    title='GitHub'
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    <FaFilePdf className='large-icon' />
-                    <h2>Resume</h2>
+                    <FaGithub className='large-icon' />
+                    <h2>GitHub</h2>
                 </a>
             </span>
         </section>
