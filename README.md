@@ -13,3 +13,4 @@ The project name, "Odyssey" is indeed a reference to Super Mario Odyssey. While 
 ## Visuals and Images
 - The Legend of Zelda: Ocarina of Time background – Nintendo
 - Mario Odyssey background – Artist: [VegaColors](https://www.deviantart.com/vegacolors/art/Odyssey-658369902)
+- Mario Odyssey Map background – Nintendo
