@@ -8,7 +8,7 @@ import Resume from '/src/assets/resume.pdf';
 function Hero() {
     return (
         <section className='hero min-h-screen bg-cover pt-24'>
-            <h1 className='zelda:text-amber-500 mario:text-red-500 p-2 font-bold text-purple-400'>
+            <h1 className='zelda:text-amber-400 mario:text-red-500 p-2 font-bold text-purple-400'>
                 Christopher Smith
             </h1>
             <h2 className='p-2 font-semibold text-blue-400'>

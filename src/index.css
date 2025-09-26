@@ -57,6 +57,10 @@
         @variant mario {
             @apply bg-red-50 border-4 border-red-600;
         }
+        @variant zelda {
+            background: rgba(0, 0, 0, 0.4);
+            border: rgba(185, 150, 88, 1) solid;
+        }
     }
 
     /* Secondary background color; changes based on theme. */
@@ -65,6 +69,11 @@
         @variant mario {
             @apply bg-red-600 hover:bg-red-500;
         }
+        @variant zelda {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("src/assets/golden-texture.png");
+            background-position: center;
+            @apply hover:bg-[url(src/assets/golden-texture.png)];
+        }
     }
 
     /* Third background color; changes based on theme. */
@@ -72,6 +81,11 @@
         @apply bg-gray-700 hover:bg-gray-600;
         @variant mario {
             @apply bg-red-500 hover:bg-red-400;
+        }
+        @variant zelda {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("src/assets/golden-texture.png");
+            background-position: center;
+            @apply hover:bg-[url(src/assets/golden-texture.png)];
         }
     }
 
@@ -90,7 +104,7 @@
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/hero.jpg");
         background-position: center;
         @variant zelda {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("/src/assets/oot.png");
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/assets/oot.png");
             background-position: 65%;
         }
         @variant mario {
@@ -111,6 +125,9 @@
             background: url("/src/assets/map.jpg");
             background-size: cover;
             background-position: center;
+        }
+        @variant zelda {
+            background-image: url(/src/assets/pattern-triforce.png), linear-gradient(to bottom, #023326 0%, #053335 50%, #0a1928 100%);
         }
     }
 }
