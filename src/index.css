@@ -61,25 +61,17 @@
 
     /* Secondary background color; changes based on theme. */
     .bg-color-2 {
-        @apply bg-gray-800;
+        @apply bg-gray-800 hover:bg-gray-700;
         @variant mario {
-            @apply bg-red-600;
+            @apply bg-red-600 hover:bg-red-500;
         }
     }
 
     /* Third background color; changes based on theme. */
     .bg-color-3 {
-        @apply bg-gray-700;        
+        @apply bg-gray-700 hover:bg-gray-600;
         @variant mario {
-            @apply bg-red-500;
-        }
-    }
-
-    /* Fourth background color; changes based on theme. */
-    .bg-color-4 {
-        @apply bg-gray-600;
-        @variant mario {
-            @apply bg-red-400;
+            @apply bg-red-500 hover:bg-red-400;
         }
     }
 
@@ -117,6 +109,7 @@
         @apply bg-black;
         @variant mario {
             background: url("/src/assets/map.jpg");
+            background-size: cover;
             background-position: center;
         }
     }
@@ -125,10 +118,7 @@
 /* MUI classes that need to be altered. */
 @layer utilities {
     .MuiMenu-paper {
-        @apply bg-gray-700 rounded-2xl;
-        @variant mario {
-            @apply bg-red-500 rounded-2xl;
-        }
+        @apply rounded-2xl bg-black;
     }
 
     .MuiMenu-list {

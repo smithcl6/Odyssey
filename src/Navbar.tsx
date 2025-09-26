@@ -35,7 +35,7 @@ function Navbar() {
 
     const options = themes.map((theme) => (
         <MenuItem
-            className='hover:bg-color-4 flex justify-center text-white'
+            className='bg-color-3 flex justify-center text-white'
             key={theme.key}
             value={theme.key}
         >
@@ -47,7 +47,7 @@ function Navbar() {
         <header className='flex w-screen justify-end'>
             <span className='fixed z-10 flex p-4 sm:p-8'>
                 <Select
-                    className='bg-color-2 hover:bg-color-3 rounded-l-2xl text-white'
+                    className='bg-color-2 rounded-l-2xl text-white'
                     name='Theme'
                     value={themeContext.theme}
                     onChange={(value) =>

@@ -63,7 +63,7 @@ function AudioManager() {
     return (
         <>
             <button
-                className='bg-color-2 hover:bg-color-3 rounded-r-2xl p-2'
+                className='bg-color-2 rounded-r-2xl p-2'
                 onClick={handleMusicState}
             >
                 <MusicIcon />
