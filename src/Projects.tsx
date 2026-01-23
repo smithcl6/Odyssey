@@ -158,10 +158,6 @@ function Projects() {
     return (
         <section>
             <h2 className='text-theme font-semibold'>Notable Projects</h2>
-            <h4 className='text-theme'>
-                These are projects I have worked on that are not involved with
-                work.
-            </h4>
             <div className='flex flex-wrap justify-evenly'>{projectCards}</div>
         </section>
     );
