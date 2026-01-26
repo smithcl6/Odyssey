@@ -13,6 +13,8 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
 import AMCTechLogo from '/src/assets/amc-tech-logo.jpg';
+import PublixLogo from '/src/assets/publix_brandmark.svg';
+import NannysLogo from '/src/assets/nannys.avif';
 import MaxxEnergyHome from '/src/assets/maxx-energy-home.png';
 import MaxxEnergyLogin from '/src/assets/maxx-energy-login.png';
 import MaxxEnergyData from '/src/assets/maxx-energy-data.png';
@@ -37,7 +39,7 @@ export interface JobInfo {
     website: string;
     timeframe: string;
     details: string[];
-    tech: JSX.Element[];
+    tech?: JSX.Element[];
 }
 
 // List of JobInfo objects. They are used to dynamically populate the Work Component.
@@ -101,6 +103,29 @@ export const jobs: JobInfo[] = [
             <FaGitAlt key='Git' title='Git' />,
             <FaNpm key='Node Package Manager' title='Node Package Manager' />,
             <VscVscode key='VSCode' title='VS Code' />,
+        ],
+    },
+    {
+        title: 'Grocery Clerk',
+        icon: PublixLogo,
+        company: 'Publix',
+        website: 'https://www.publix.com/',
+        timeframe: 'December 2020 — May 2021',
+        details: [
+            `Fronted and stocked grocery isles.`,
+            `Provided premium customer service.
+            This included proactively greeting and assisting customers in the vicinity, as well as assisting them when directly approached.`,
+        ],
+    },
+    {
+        title: 'Kitchen Crew Member',
+        icon: NannysLogo,
+        company: "Nanny's BBQ",
+        website: 'https://www.nannysbbq.com/',
+        timeframe: 'March 2016 — August 2019',
+        details: [
+            `Started as a dishwasher for about a year. Moved up to different kitchen roles. Eventually was the primary employee for frying chicken during weekends.`,
+            `Other misc. responsibilities included cleaning and maintaining equipment and facilities.`,
         ],
     },
 ];

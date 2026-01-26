@@ -18,20 +18,23 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
     return (
         <Accordion className='bg-color-1 text-theme'>
             <AccordionSummary
-                expandIcon={<ArrowDropDownIcon className='text-theme' />}
+                expandIcon={
+                    <ArrowDropDownIcon className='text-theme text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl' />
+                }
             >
-                <div className='flex w-full items-center'>
-                    <a
-                        className='w-1/3 sm:w-1/4'
-                        href={jobInfo.website}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        <img
-                            className='rounded-2xl object-scale-down'
-                            src={jobInfo.icon}
-                        />
-                    </a>
+                <div className='flex w-full items-center justify-end'>
+                    <span className='flex w-1/3 sm:w-1/4'>
+                        <a
+                            href={jobInfo.website}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <img
+                                className='size-48 rounded-2xl object-scale-down'
+                                src={jobInfo.icon}
+                            />
+                        </a>
+                    </span>
                     <span className='flex w-2/3 flex-col justify-between sm:w-3/4 sm:flex-row'>
                         <h4 className='p-2'>{jobInfo.title}</h4>
                         <h4 className='p-2'>{jobInfo.timeframe}</h4>
@@ -48,7 +51,7 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
                         </li>
                     ))}
                 </ul>
-                <h4 className='font-bold'>Tech Used</h4>
+                {jobInfo.tech && <h4 className='font-bold'>Tech Used</h4>}
                 <span className='flex flex-wrap justify-evenly'>
                     {jobInfo.tech?.map((tech) => (
                         <div
