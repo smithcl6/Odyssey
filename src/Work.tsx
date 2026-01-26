@@ -90,9 +90,7 @@ function Work() {
 
     return (
         <section>
-            <h2 className='text-theme p-4 font-semibold sm:p-0 sm:pt-4 sm:pb-4'>
-                Work Experience
-            </h2>
+            <h2 className='text-theme p-4 font-semibold'>Work Experience</h2>
             <Timeline
                 sx={{
                     [`& .${timelineItemClasses.root}:before`]: {

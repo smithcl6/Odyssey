@@ -157,7 +157,7 @@ function Projects() {
 
     return (
         <section>
-            <h2 className='text-theme font-semibold'>Notable Projects</h2>
+            <h2 className='text-theme p-4 font-semibold'>Notable Projects</h2>
             <div className='flex flex-wrap justify-evenly'>{projectCards}</div>
         </section>
     );
