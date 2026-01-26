@@ -2,8 +2,9 @@ import { useContext, type JSX } from 'react';
 import { ThemeContext } from './ThemeContext';
 import AudioManager from './AudioManager';
 import { CiDark } from 'react-icons/ci';
-import { GiTriforce, GiSuperMushroom } from 'react-icons/gi';
+import { GiTriforce } from 'react-icons/gi';
 import { MenuItem, Select } from '@mui/material';
+import Mushroom from '/src/assets/mushroom.svg?react';
 
 interface ThemeIcon {
     key: string;
@@ -29,7 +30,7 @@ function Navbar() {
         },
         {
             key: 'mario',
-            icon: <GiSuperMushroom className='small-icon' />,
+            icon: <Mushroom className='small-icon' />,
         },
     ];
 
