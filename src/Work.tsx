@@ -30,7 +30,7 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
                             rel='noopener noreferrer'
                         >
                             <img
-                                className='size-48 rounded-2xl object-scale-down'
+                                className='w-[30vw] rounded-2xl object-scale-down sm:w-[15vw]'
                                 src={jobInfo.icon}
                             />
                         </a>
