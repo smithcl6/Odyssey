@@ -16,7 +16,7 @@ import { type JobInfo, jobs } from './constants';
  */
 function Job({ jobInfo }: { jobInfo: JobInfo }) {
     return (
-        <Accordion className='bg-color-1 text-theme'>
+        <Accordion className='bg-color-1 text-theme rounded-2xl'>
             <AccordionSummary
                 expandIcon={
                     <ArrowDropDownIcon className='text-theme text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl' />
