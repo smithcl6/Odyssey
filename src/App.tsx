@@ -2,6 +2,7 @@
 import Hero from './Hero';
 import Navbar from './Navbar';
 import Work from './Work';
+import Education from './Education';
 import Projects from './Projects';
 import { ThemeProvider } from './ThemeProvider';
 
@@ -17,6 +18,7 @@ function App() {
             <div className='bg-body'>
                 {/* <About></About> */}
                 <Work></Work>
+                <Education></Education>
                 <Projects></Projects>
             </div>
         </ThemeProvider>

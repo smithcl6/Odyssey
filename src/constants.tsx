@@ -15,6 +15,8 @@ import { AiOutlineDotNet } from 'react-icons/ai';
 import AMCTechLogo from '/src/assets/amc-tech-logo.jpg';
 import PublixLogo from '/src/assets/publix_brandmark.svg';
 import NannysLogo from '/src/assets/nannys.avif';
+import VCULogo from '/src/assets/vcu-logo.svg';
+import BrightPointLogo from '/src/assets/brightpoint-logo.svg';
 import MaxxEnergyHome from '/src/assets/maxx-energy-home.png';
 import MaxxEnergyLogin from '/src/assets/maxx-energy-login.png';
 import MaxxEnergyData from '/src/assets/maxx-energy-data.png';
@@ -42,7 +44,7 @@ export interface JobInfo {
     tech?: JSX.Element[];
 }
 
-// List of JobInfo objects. They are used to dynamically populate the Work Component.
+// List of JobInfo objects. Dynamically populates the Work Component.
 export const jobs: JobInfo[] = [
     {
         title: 'Software Engineer',
@@ -130,6 +132,37 @@ export const jobs: JobInfo[] = [
     },
 ];
 
+// Information that should be included for each college degree.
+export interface EducationInfo {
+    degree: string;
+    icon: string;
+    college: string;
+    website: string;
+    timeframe: string;
+    gpa: string;
+}
+
+// List of EducationInfo objects. Dynamically populates the Education Component.
+export const degrees: EducationInfo[] = [
+    {
+        degree: 'Bachelor of Science in Computer Science',
+        icon: VCULogo,
+        college: 'Virginia Commonwealth University',
+        website: 'https://www.vcu.edu/',
+        timeframe: 'January 2020 — December 2023',
+        gpa: 'GPA: 3.9',
+    },
+    {
+        degree: 'Associate of General Studies',
+        icon: BrightPointLogo,
+        college:
+            'Brightpoint Community College (Formerly John Tyler Community College)',
+        website: 'https://www.brightpoint.edu/',
+        timeframe: 'January 2017 — December 2019',
+        gpa: 'GPA: 4.0',
+    },
+];
+
 // Information that should be included in personal projects.
 export interface ProjectInfo {
     title: string;
@@ -140,7 +173,7 @@ export interface ProjectInfo {
     repo?: string;
 }
 
-// List of ProjectInfo objects. They are used to dynamically populate the Projects Component.
+// List of ProjectInfo objects. Dynamically populates the Projects Component.
 export const projects: ProjectInfo[] = [
     {
         title: 'Maxx Energy Employee Portal',
