@@ -179,7 +179,8 @@ export const projects: ProjectInfo[] = [
         title: 'Maxx Energy Employee Portal',
         images: [MaxxEnergyHome, MaxxEnergyLogin, MaxxEnergyData],
         summary: `Full-stack website for a fictional company.
-                    It was built as part of a Work Simulator.`,
+                    It was built as part of a Work Simulator,
+                    that took place between January 2025 — March 2025.`,
         details: [
             `I participated in an 8-week program ran by the company, Maxx Potential.
             This program is known as their Work Simulator. During those 8 weeks,
