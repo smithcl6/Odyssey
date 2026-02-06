@@ -6,8 +6,12 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import Accordion from '@mui/material/Accordion';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 import { AccordionDetails, AccordionSummary } from '@mui/material';
 import { type JobInfo, jobs } from './constants';
+import { useState } from 'react';
 
 /**
  * This component represents a job that is placed within the Work component's timeline.
@@ -73,8 +77,11 @@ function Job({ jobInfo }: { jobInfo: JobInfo }) {
  * @returns work timeline section of the page.
  */
 function Work() {
+    const [showVolunteering, setShowVolunteering] = useState(true);
+
     // Holds MUI TimelinItems for each job.
     const timeLineItems = jobs.map((job, index) => {
+        if (job.volunteer && !showVolunteering) return;
         return (
             <TimelineItem key={index}>
                 <TimelineSeparator>
@@ -91,6 +98,19 @@ function Work() {
     return (
         <section>
             <h2 className='text-theme p-4 font-semibold'>Work Experience</h2>
+            <FormGroup className='text-theme self-center p-4'>
+                <FormControlLabel
+                    control={
+                        <Switch
+                            defaultChecked
+                            onChange={(
+                                event: React.ChangeEvent<HTMLInputElement>,
+                            ) => setShowVolunteering(event.target.checked)}
+                        />
+                    }
+                    label='Show Volunteer Experience'
+                />
+            </FormGroup>
             <Timeline
                 sx={{
                     [`& .${timelineItemClasses.root}:before`]: {

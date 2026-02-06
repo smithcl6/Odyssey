@@ -1,6 +1,12 @@
 import type { JSX } from 'react';
 import { DiNginx } from 'react-icons/di';
-import { FaGitAlt, FaGithub, FaNpm, FaReact } from 'react-icons/fa';
+import {
+    FaGitAlt,
+    FaGithub,
+    FaNpm,
+    FaReact,
+    FaFileExcel,
+} from 'react-icons/fa';
 import {
     SiAngular,
     SiExpress,
@@ -9,9 +15,13 @@ import {
     SiMysql,
     SiVite,
 } from 'react-icons/si';
+import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
+import FoodBankLogo from '/src/assets/cfboc.jpg';
+import DonorPerfect from '/src/assets/donor-perfect.svg?react';
+import Link2Feed from '/src/assets/link2feed.png';
 import AMCTechLogo from '/src/assets/amc-tech-logo.jpg';
 import PublixLogo from '/src/assets/publix_brandmark.svg';
 import NannysLogo from '/src/assets/nannys.avif';
@@ -42,10 +52,33 @@ export interface JobInfo {
     timeframe: string;
     details: string[];
     tech?: JSX.Element[];
+    volunteer?: boolean;
 }
 
 // List of JobInfo objects. Dynamically populates the Work Component.
 export const jobs: JobInfo[] = [
+    {
+        title: 'IT Volunteer',
+        icon: FoodBankLogo,
+        company: 'Chesterfield Foodbank Outreach Center',
+        website: 'https://www.cfboc.org/',
+        timeframe: 'December 2025 — Current',
+        details: [
+            `Assist with various IT tasks depending on what is needed.
+            This has ranged from troubleshooting malfunctioning printers, to installing new hardware such as routers.`,
+            `Create reports and set calculated fields in DonorPerfect — Customer Relationship Management (CRM).
+            These reports require filters that are built using SQL.`,
+            `Help the data entry team by inputting client data into another CRM, Link2Feed.`,
+            `Work with Microsoft Excel to create graphs and clean up data that is exported from DonorPerfect and Link2Feed.`,
+        ],
+        tech: [
+            <FaFileExcel key={'Microsoft Excel'} title='Microsoft Excel' />,
+            <DonorPerfect key={'DonorPerfect'} title='DonorPerfect' />,
+            <AiOutlineConsoleSql key={'SQL'} title='SQL' />,
+            <img src={Link2Feed} key={'Link2Feed'} title='Link2Feed' />,
+        ],
+        volunteer: true,
+    },
     {
         title: 'Software Engineer',
         icon: AMCTechLogo,
