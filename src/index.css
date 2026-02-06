@@ -89,14 +89,14 @@
         }
     }
 
-    /* Sizing for larger svg icons */
+    /* Sizing for larger icons | text for svg | size for img */
     .large-icon {
-        @apply text-7xl sm:text-8xl md:text-9xl;
+        @apply text-7xl sm:text-8xl md:text-9xl size-[4.5rem] sm:size-24 md:size-32;
     }
 
-    /* Sizing for smaller svg icons */
+    /* Sizing for smaller icons | text for svg | size for img */
     .small-icon {
-        @apply text-3xl sm:text-4xl md:text-5xl;
+        @apply text-3xl sm:text-4xl md:text-5xl size-[1.875rem] sm:size-9 md:size-12;
     }
 
     /* Sets background to use an image based on the chosen theme. */
