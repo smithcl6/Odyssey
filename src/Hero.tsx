@@ -15,10 +15,10 @@ function Hero() {
                 Software Developer
             </h2>
             <h4 className='p-2 font-medium text-white'>
-                I'm a junior developer with full-stack experience, especially in
-                front-end development using Angular and React. With that said, I
-                am still early in my career and am open-minded to areas outside
-                of web dev. In any case, I care about writing clean,
+                I'm a junior software developer with full-stack experience,
+                especially in front-end development using Angular and React.
+                With that said, I am still early in my career and am open-minded
+                to areas outside of web development. I care about writing clean,
                 maintainable, and scalable code.
             </h4>
             <span className='flex flex-wrap justify-around p-4 pt-8'>
