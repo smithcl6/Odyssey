@@ -19,7 +19,7 @@ import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
-import FoodBankLogo from '/src/assets/cfboc.jpg';
+import FoodBankLogo from '/src/assets/cfboc.png';
 import DonorPerfect from '/src/assets/donor-perfect.svg?react';
 import Link2Feed from '/src/assets/link2feed.png';
 import AMCTechLogo from '/src/assets/amc-tech-logo.jpg';
