@@ -54,6 +54,7 @@ function AudioManager() {
      */
     function handleMusicState() {
         if (audioRef.current?.paused) {
+            audioRef.current.volume = 0.25;
             audioRef.current.play();
         } else {
             audioRef.current?.pause();
