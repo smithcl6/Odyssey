@@ -119,7 +119,7 @@ export const jobs: JobInfo[] = [
             such as updating the Angular or .NET version of different projects.`,
             `Agile work environment. Alongside daily standups, we had to present our progress to the company every other sprint.`,
             `Summer 2023: Prototyped transcription functionality and sentiment analysis in an existing telephony application.
-            The project utilized Azure Cognitive Services (renamed to Azure AI Services)
+            The project utilized Azure Cognitive Services (renamed Azure AI Services)
             which provided a cloud-based speech-to-text AI model. As a prototype, our final demo of the project
             involved passing transcriptions to a GPT model that was meant to serve as a call center agent "co-pilot"
             by giving recommendations to the human agent. Further utilization of Azure AI Services was included
@@ -215,13 +215,13 @@ export const projects: ProjectInfo[] = [
                     It was built as part of a Work Simulator,
                     that took place between January 2025 — March 2025.`,
         details: [
-            `I participated in an 8-week program ran by the company, Maxx Potential.
+            `I participated in an 8-week program run by the company, Maxx Potential.
             This program is known as their Work Simulator. During those 8 weeks,
             I worked remotely for "Maxx Energy". Maxx Energy consisted of 4 departments/teams: DevOps, Data, Security, and Support.
             I was a member of the DevOps team. The DevOps team was responsible for creating an employee portal
             that integrated work from the data team into the website.`,
-            `Given that I had years of DevOps experience under my belt, I took on the position of team lead.
-            I was responsible for delegating tasks to the other three members in the dev team as well as lead agile processes such as standup.`,
+            `Given that I had years of DevOps experience under my belt, I took on the position of team leader.
+            I was responsible for delegating tasks to the other three members in the dev team as well as leading agile processes such as standup.`,
             `Before we could begin development of the website, we needed to decide on a tech stack and make sure we knew what
             we were doing to a certain extent. This resulted in the first few weeks being primarily dedicated to teaching/learning.
             This included technologies like Git, HTML, CSS, JavaScript, REST, and eventually Angular.`,
@@ -252,9 +252,9 @@ export const projects: ProjectInfo[] = [
             `This project was based on an application developed by our project sponsor, Dr. Virginia Chu.
             She had created a custom program that could help evaluate prewriting skills,
             but the grading system required manual involvement.
-            Additionally, it was not a portable app and its accessbility was limited.`,
+            Additionally, it was not a portable app and its accessibility was limited.`,
             `Our assignment was to recreate an application that could overcome the aforementioned shortcomings.
-            We needed to create an application that could not only grade scores automatically, 
+            We needed to create an application that could not only grade scores automatically 
             but also be accessible on multiple devices as well as accommodate various screen sizes.`,
             `Our chosen tech stack included React and JavaScript Canvas APIs for the front end,
             and our backend was built using Flask and a MySQL database.`,
@@ -263,7 +263,7 @@ export const projects: ProjectInfo[] = [
             `Regarding development, I was responsible for the entire front end.`,
             `Our project was awarded the Sternheimer grant around the halfway point of the project.`,
             `Our project came in 1st place at the Capstone Expo of 2023.
-            Considering there were roughly 90 other teams, this was a huge honor.`,
+            Considering there were 90 other teams, this was a huge honor.`,
             `Lastly, I wanted to mention this project was possible due to working with an excellent team.
             Referring to the picture taken above, from left to right are Charles Cutler, 
             Noah Shields, Edward Ladia, and myself on the right. All four of us are now VCU Computer Science Graduates. 
