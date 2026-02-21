@@ -1,6 +1,11 @@
 import { type EducationInfo, degrees } from './constants';
 import { type JSX } from 'react';
 
+/**
+ * Takes information of each college degree and displays them in a uniform layout.
+ * @param educationInfo houses information of each degree. Allows for scalable Education section.
+ * @returns container that displays information for each degree.
+ */
 function Degree({
     educationInfo,
 }: {
@@ -30,6 +35,10 @@ function Degree({
     );
 }
 
+/**
+ * Component that lists college degrees.
+ * @returns section of the page that displays education background.
+ */
 function Education() {
     const education = degrees.map((degree, index) => (
         <Degree key={index} educationInfo={degree} />

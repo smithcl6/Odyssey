@@ -1,5 +1,9 @@
 import Profile from '/src/assets/profile.jpg';
 
+/**
+ * Besides having an image of me, unsure what I want to put here.
+ * @returns section of the page that talks about me.
+ */
 function About() {
     return (
         <section>

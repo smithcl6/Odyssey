@@ -42,6 +42,7 @@
     }
 }
 
+/* CSS classes that are heavily resused or have greater complexity. */
 @layer components {
     /* Applies text color based on theme. */
     .text-theme {
