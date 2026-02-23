@@ -7,6 +7,7 @@ export interface Theme {
 
 /**
  * Stores the context of what state the app's theme should be.
+ * This default object is only used if there is no matching provider.
  */
 export const ThemeContext = createContext<Theme>({
     theme: 'dark',
