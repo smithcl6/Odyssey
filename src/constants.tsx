@@ -118,7 +118,7 @@ export const jobs: JobInfo[] = [
             Because of school, work items were usually lower in priority during the fall and spring, 
             such as updating the Angular or .NET version of different projects.`,
             `Agile work environment. Alongside daily standups, we had to present our progress to the company every other sprint.`,
-            `Summer 2023: Prototyped transcription functionality and sentiment analysis in an existing telehony application.
+            `Summer 2023: Prototyped transcription functionality and sentiment analysis in an existing telephony application.
             The project utilized Azure Cognitive Services (renamed Azure AI Services)
             which provided a cloud-based speech-to-text AI model. As a prototype, our final demo of the project
             involved passing transcriptions to a GPT model that was meant to serve as a call center agent "co-pilot"
