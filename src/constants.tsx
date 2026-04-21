@@ -114,7 +114,6 @@ export const jobs: JobInfo[] = [
         details: [
             `Full-time work during the summer, and part-time work during fall and spring semesters.
             Each summer consisted of different web development projects that involved direct collaboration with another intern.
-            Further details of each summer project are mentioned below.
             Because of school, work items were usually lower in priority during the fall and spring, 
             such as updating the Angular or .NET version of different projects.`,
             `Agile work environment. Alongside daily standups, we had to present our progress to the company every other sprint.`,
