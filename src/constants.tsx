@@ -62,7 +62,7 @@ export const jobs: JobInfo[] = [
         icon: FoodBankLogo,
         company: 'Chesterfield Foodbank Outreach Center',
         website: 'https://www.cfboc.org/',
-        timeframe: 'December 2025 — Current',
+        timeframe: 'December 2025 — July 2026',
         details: [
             `Assist with various IT tasks depending on what is needed.
             This has ranged from troubleshooting malfunctioning printers, to installing new hardware such as routers.`,
