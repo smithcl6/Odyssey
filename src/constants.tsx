@@ -19,6 +19,7 @@ import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { VscAzure, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
+import ReesourcesLogo from '/src/assets/reesources_logo.jpg';
 import FoodBankLogo from '/src/assets/cfboc.png';
 import DonorPerfect from '/src/assets/donor-perfect.svg?react';
 import Link2Feed from '/src/assets/link2feed.png';
@@ -57,6 +58,18 @@ export interface JobInfo {
 
 // List of JobInfo objects. Dynamically populates the Work Component.
 export const jobs: JobInfo[] = [
+    {
+        title: 'Lead Software Developer',
+        icon: ReesourcesLogo,
+        company: 'Reesources',
+        website: 'https://reesources.com/',
+        timeframe: 'July 2026 — Current',
+        details: ['Details will be posted in the future.'],
+        tech: [
+            <FaGitAlt key='Git' title='Git' />,
+            <VscVscode key='VSCode' title='VS Code' />,
+        ],
+    },
     {
         title: 'IT Volunteer',
         icon: FoodBankLogo,
