@@ -6,6 +6,7 @@ import {
     FaNpm,
     FaReact,
     FaFileExcel,
+    FaDocker,
 } from 'react-icons/fa';
 import {
     SiAngular,
@@ -14,10 +15,13 @@ import {
     SiMui,
     SiMysql,
     SiVite,
+    SiNetlify,
+    SiSupabase,
+    SiClaude,
 } from 'react-icons/si';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { RiTailwindCssFill } from 'react-icons/ri';
-import { VscAzure, VscVscode } from 'react-icons/vsc';
+import { VscAzure, VscAzureDevops, VscVscode } from 'react-icons/vsc';
 import { AiOutlineDotNet } from 'react-icons/ai';
 import ReesourcesLogo from '/src/assets/reesources_logo.jpg';
 import FoodBankLogo from '/src/assets/cfboc.png';
@@ -59,13 +63,21 @@ export interface JobInfo {
 // List of JobInfo objects. Dynamically populates the Work Component.
 export const jobs: JobInfo[] = [
     {
-        title: 'Lead Software Developer',
+        title: 'Software Developer Consultant',
         icon: ReesourcesLogo,
-        company: 'Reesources',
+        company: 'iReesources',
         website: 'https://reesources.com/',
-        timeframe: 'July 2026 — Current',
-        details: ['Details will be posted in the future.'],
+        timeframe: 'July 2026 — September 2026',
+        details: [
+            'Addressed security vulnerabilities.',
+            'Initialized CI/CD processes involving Netlify and Azure DevOps.',
+        ],
         tech: [
+            <SiNetlify key='Netlify' title='Netlify' />,
+            <SiSupabase key='Supabase' title='Supabase' />,
+            <VscAzureDevops key='Azure DevOps' title='Azure DevOps' />,
+            <FaDocker key='Docker' title='Docker' />,
+            <SiClaude key='Claude Code' title='Claude Code' />,
             <FaGitAlt key='Git' title='Git' />,
             <VscVscode key='VSCode' title='VS Code' />,
         ],
